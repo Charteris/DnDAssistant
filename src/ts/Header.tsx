@@ -37,6 +37,7 @@ const Header = () => {
                 <MenuItem
                   onClick={() => navigate(page.path)}
                   sx={{ py: '6px', px: '12px' }}
+                  key={page.label}
                 >
                   <Typography variant="body2" color="info">
                     {page.name}

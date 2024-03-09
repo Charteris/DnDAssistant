@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Container, TextField } from '@mui/material';
-import monsters from '../res/srd_5e_monsters.json';
-import { DataGrid } from '@mui/x-data-grid';
+import spells from '../../res/srd_5e_spells.json';
+import { DataGrid, GridValueGetterParams } from '@mui/x-data-grid';
 import { useNavigate } from 'react-router-dom';
+import { Spell } from '../types/Spell';
 
 const columnDescriptor = [
   {
@@ -13,70 +14,57 @@ const columnDescriptor = [
     filterable: true,
   },
   {
-    field: 'AC',
+    field: 'level',
+    headerName: 'Level',
     flex: 1,
     sortable: true,
     filterable: true,
   },
   {
-    field: 'HP',
+    field: 'school',
+    headerName: 'School',
     flex: 1,
     sortable: true,
     filterable: true,
   },
   {
-    field: 'Speed',
+    field: 'range',
+    headerName: 'Range',
     flex: 1,
     sortable: true,
     filterable: true,
   },
   {
-    field: 'STR',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'DEX',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'CON',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'INT',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'WIS',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'CHA',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'Senses',
+    field: 'casting_time',
+    headerName: 'Casting Time',
     flex: 1,
     sortable: true,
     filterable: true,
   },
   {
-    field: 'Challenge',
+    field: 'duration',
+    headerName: 'Duration',
     flex: 1,
     sortable: true,
     filterable: true,
+  },
+  {
+    field: 'components',
+    headerName: 'Components',
+    flex: 1,
+    sortable: true,
+    filterable: true,
+    valueGetter: (params: GridValueGetterParams<Spell>) =>
+      params.row.components.raw,
+  },
+  {
+    field: 'classes',
+    headerName: 'Classes',
+    flex: 1,
+    sortable: true,
+    filterable: true,
+    valueGetter: (params: GridValueGetterParams<Spell>) =>
+      params.row.classes.join(', '),
   },
 ];
 
@@ -92,13 +80,13 @@ export default function MonsterTable() {
         sx={{ marginBottom: 2 }}
         value={searchQuery}
         onChange={(event) => setSearchQuery(event.target.value)}
-        label="Search Monsters"
+        label="Search Spells"
         size="small"
       />
       <DataGrid
-        rows={monsters.filter((monster) => monster.name.includes(searchQuery))}
+        rows={spells.filter((spell) => spell.name.includes(searchQuery))}
         columns={columnDescriptor}
-        onRowClick={(params) => navigate(`/${params.row.name}`)}
+        onRowClick={(params) => navigate(`/spells/${params.row.name}`)}
         initialState={{
           pagination: {
             paginationModel: { pageSize: 25 },

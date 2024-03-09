@@ -8,9 +8,12 @@ import ReactDOM from 'react-dom/client';
 import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import MonsterTable from './ts/MonsterTable';
-import Header from './ts/Header';
-import MonsterView from './ts/MonsterView';
+import MonsterTable from './ts/monsters/monster-table';
+import Header from './ts/header';
+import MonsterView from './ts/monsters/monster-view';
+import EncounterGenerate from './ts/encounters/encounter-generator';
+import Mechanics from './ts/mechanics/mechanics';
+import SpellTable from './ts/spells/spell-table';
 
 const router = createBrowserRouter([
   {
@@ -18,12 +21,24 @@ const router = createBrowserRouter([
     element: <Header />,
     children: [
       {
-        path: '', // 'monsters',
+        path: '',
+        element: <Mechanics />,
+      },
+      {
+        path: 'monsters',
         element: <MonsterTable />,
       },
       {
-        path: '/:name',
+        path: 'monsters/:name',
         element: <MonsterView />,
+      },
+      {
+        path: 'encounter',
+        element: <EncounterGenerate />,
+      },
+      {
+        path: 'spells',
+        element: <SpellTable />,
       },
     ],
   },

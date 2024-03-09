@@ -4,9 +4,9 @@ import {
   ArrowCircleLeftOutlined,
   ArrowCircleRightOutlined,
 } from '@mui/icons-material';
-import monsters from '../res/srd_5e_monsters.json';
+import monsters from '../../res/srd_5e_monsters.json';
 import { useNavigate, useParams } from 'react-router-dom';
-import MonsterCard from './MonsterCard';
+import MonsterCard from './monster-card';
 
 export default function MonsterView() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function MonsterView() {
       let newIndex = monsterIndex + pageSkip;
       if (newIndex < 0) newIndex = monsters.length - 1;
       if (newIndex >= monsters.length) newIndex = 0;
-      navigate(`/${monsters[newIndex].name}`);
+      navigate(`/monsters/${monsters[newIndex].name}`);
     },
     [monsterIndex, monsters]
   );

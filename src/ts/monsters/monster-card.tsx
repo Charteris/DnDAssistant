@@ -8,9 +8,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import monsters from '../res/srd_5e_monsters.json';
-
-export type Monster = (typeof monsters)[0];
+import { Monster } from '../types/Monster';
 
 const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
   const statsA = [
