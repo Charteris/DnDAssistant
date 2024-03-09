@@ -1,5 +1,12 @@
 import React, { FC, useCallback, useState } from 'react';
-import { Stack, Box, Typography, Button, IconButton } from '@mui/material';
+import {
+  Stack,
+  Box,
+  Typography,
+  Button,
+  IconButton,
+  TextField,
+} from '@mui/material';
 import { Shield, Favorite, Air, Delete } from '@mui/icons-material';
 import { Monster } from '../types/Monster';
 import MonsterCard from '../monsters/monster-card';
@@ -17,12 +24,13 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
     setSelectedMonster(monstersInCombat[0]);
   }
 
-  const getHPCount = useCallback(
-    (monster: Monster, index: number) => {
-      const maxHP = monster.HP.split(' ')[0];
-      return `${tempHP[index] ?? maxHP} / ${maxHP}`;
+  const setTempHPByIndex = useCallback(
+    (newHP: number, index: number) => {
+      const newTempHPs = [...tempHP];
+      newTempHPs[index] = newHP;
+      setTempHP(newTempHPs);
     },
-    [tempHP]
+    [tempHP, setTempHP]
   );
 
   return monstersInCombat.length === 0 ? (
@@ -54,8 +62,16 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
                   {monster.AC.split(' ')[0]}
                 </Typography>
                 <Favorite />
+                <TextField
+                  value={tempHP}
+                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                    setTempHPByIndex(Number(event.target.value), index);
+                  }}
+                  label="HP"
+                  variant="filled"
+                />
                 <Typography marginRight={2}>
-                  {getHPCount(monster, index)}
+                  {` / ${monster.HP.split(' ')[0]}`}
                 </Typography>
                 <Air />
                 <Typography marginRight={2}>

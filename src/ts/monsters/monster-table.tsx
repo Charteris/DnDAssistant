@@ -96,7 +96,13 @@ export default function MonsterTable() {
         size="small"
       />
       <DataGrid
-        rows={monsters.filter((monster) => monster.name.includes(searchQuery))}
+        rows={monsters.filter((monster) =>
+          searchQuery
+            .split('+')
+            .some((query) =>
+              monster.name.toLowerCase().includes(query.toLowerCase())
+            )
+        )}
         columns={columnDescriptor}
         onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
         initialState={{

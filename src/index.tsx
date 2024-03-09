@@ -14,6 +14,8 @@ import MonsterView from './ts/monsters/monster-view';
 import EncounterGenerate from './ts/encounters/encounter-generator';
 import Mechanics from './ts/mechanics/mechanics';
 import SpellTable from './ts/spells/spell-table';
+import SpellView from './ts/spells/spell-view';
+import Shop from './ts/shop/shop';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: 'spells',
         element: <SpellTable />,
+      },
+      {
+        path: 'spells/:name',
+        element: <SpellView />,
+      },
+      {
+        path: 'gear',
+        element: <Shop />,
       },
     ],
   },

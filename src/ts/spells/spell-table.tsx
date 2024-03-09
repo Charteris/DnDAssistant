@@ -84,7 +84,13 @@ export default function MonsterTable() {
         size="small"
       />
       <DataGrid
-        rows={spells.filter((spell) => spell.name.includes(searchQuery))}
+        rows={spells.filter((spell) =>
+          searchQuery
+            .split('+')
+            .some((query) =>
+              spell.name.toLowerCase().includes(query.toLowerCase())
+            )
+        )}
         columns={columnDescriptor}
         onRowClick={(params) => navigate(`/spells/${params.row.name}`)}
         initialState={{
