@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/DnDAssistant/static/js/main.d0108efb.js",
+    "index.html": "/DnDAssistant/index.html",
+    "main.d0108efb.js.map": "/DnDAssistant/static/js/main.d0108efb.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d0108efb.js"
+  ]
+}
