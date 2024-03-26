@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Stack, TextField, Typography } from '@mui/material';
+import { Container, Paper, Stack, TextField, Typography } from '@mui/material';
 import armours from '../../res/srd_5e_armour.json';
 import weapons from '../../res/srd_5e_weapons.json';
 import gears from '../../res/srd_5e_gear.json';
@@ -148,67 +148,79 @@ export default function MonsterTable() {
         label="Search Monsters"
         size="small"
       />
-      <Stack spacing={1}>
-        <Typography variant="h5">Armour</Typography>
-        <DataGrid
-          rows={armours.filter((armour) =>
-            searchQuery
-              .split('+')
-              .some((query) =>
-                armour.name.toLowerCase().includes(query.toLowerCase())
-              )
-          )}
-          columns={armourColumnDescriptor}
-          onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-          initialState={{
-            pagination: {
-              paginationModel: { pageSize: 10 },
-            },
-          }}
-          pageSizeOptions={[10, 25, 50]}
-          getRowId={(row) => row.name}
-          sx={{ width: '100%' }}
-        />
-        <Typography variant="h5">Weapons</Typography>
-        <DataGrid
-          rows={weapons.filter((weapon) =>
-            searchQuery
-              .split('+')
-              .some((query) =>
-                weapon.name.toLowerCase().includes(query.toLowerCase())
-              )
-          )}
-          columns={weaponColumnDescriptor}
-          onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-          initialState={{
-            pagination: {
-              paginationModel: { pageSize: 10 },
-            },
-          }}
-          pageSizeOptions={[10, 25, 50]}
-          getRowId={(row) => row.name}
-          sx={{ width: '100%' }}
-        />
-        <Typography variant="h5">Gear</Typography>
-        <DataGrid
-          rows={gears.filter((gear) =>
-            searchQuery
-              .split('+')
-              .some((query) =>
-                gear.name.toLowerCase().includes(query.toLowerCase())
-              )
-          )}
-          columns={gearColumnDescriptor}
-          onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-          initialState={{
-            pagination: {
-              paginationModel: { pageSize: 10 },
-            },
-          }}
-          pageSizeOptions={[10, 25, 50]}
-          getRowId={(row) => row.name}
-          sx={{ width: '100%' }}
-        />
+      <Stack spacing={2} p={3}>
+        <Paper sx={{ margin: 3 }}>
+          <Typography variant="h5" margin={1}>
+            Armour
+          </Typography>
+          <DataGrid
+            rows={armours.filter((armour) =>
+              searchQuery
+                .split('+')
+                .some((query) =>
+                  armour.name.toLowerCase().includes(query.toLowerCase())
+                )
+            )}
+            columns={armourColumnDescriptor}
+            onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
+            initialState={{
+              pagination: {
+                paginationModel: { pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[10, 25, 50]}
+            getRowId={(row) => row.name}
+            sx={{ width: '100%' }}
+          />
+        </Paper>
+        <Paper sx={{ margin: 3 }}>
+          <Typography variant="h5" margin={1}>
+            Weapons
+          </Typography>
+          <DataGrid
+            rows={weapons.filter((weapon) =>
+              searchQuery
+                .split('+')
+                .some((query) =>
+                  weapon.name.toLowerCase().includes(query.toLowerCase())
+                )
+            )}
+            columns={weaponColumnDescriptor}
+            onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
+            initialState={{
+              pagination: {
+                paginationModel: { pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[10, 25, 50]}
+            getRowId={(row) => row.name}
+            sx={{ width: '100%' }}
+          />
+        </Paper>
+        <Paper sx={{ margin: 3 }}>
+          <Typography variant="h5" margin={1}>
+            Adventuring Gear
+          </Typography>
+          <DataGrid
+            rows={gears.filter((gear) =>
+              searchQuery
+                .split('+')
+                .some((query) =>
+                  gear.name.toLowerCase().includes(query.toLowerCase())
+                )
+            )}
+            columns={gearColumnDescriptor}
+            onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
+            initialState={{
+              pagination: {
+                paginationModel: { pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[10, 25, 50]}
+            getRowId={(row) => row.name}
+            sx={{ width: '100%' }}
+          />
+        </Paper>
       </Stack>
     </Container>
   );

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Box, Container, IconButton, Typography } from '@mui/material';
+import { Box, Container, IconButton, Stack, Typography } from '@mui/material';
 import {
   ArrowCircleLeftOutlined,
   ArrowCircleRightOutlined,
@@ -30,14 +30,15 @@ export default function MonsterView() {
     </Typography>
   ) : (
     <Container sx={{ justifyContent: 'center', alignContent: 'center' }}>
-      <Box justifyContent="space-between" alignItems="center">
+      <Stack direction="row" justifyContent="center" alignItems="center">
         <IconButton onClick={() => iteratePage(-1)}>
           <ArrowCircleLeftOutlined />
         </IconButton>
+        <Typography>{`Page ${monsterIndex + 1}`}</Typography>
         <IconButton onClick={() => iteratePage(1)}>
           <ArrowCircleRightOutlined />
         </IconButton>
-      </Box>
+      </Stack>
       <MonsterCard monster={selectedMonster} />
     </Container>
   );

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, TextField } from '@mui/material';
+import { Container, Paper, TextField } from '@mui/material';
 import spells from '../../res/srd_5e_spells.json';
 import { DataGrid, GridValueGetterParams } from '@mui/x-data-grid';
 import { useNavigate } from 'react-router-dom';
@@ -83,25 +83,27 @@ export default function MonsterTable() {
         label="Search Spells"
         size="small"
       />
-      <DataGrid
-        rows={spells.filter((spell) =>
-          searchQuery
-            .split('+')
-            .some((query) =>
-              spell.name.toLowerCase().includes(query.toLowerCase())
-            )
-        )}
-        columns={columnDescriptor}
-        onRowClick={(params) => navigate(`/spells/${params.row.name}`)}
-        initialState={{
-          pagination: {
-            paginationModel: { pageSize: 25 },
-          },
-        }}
-        pageSizeOptions={[10, 25, 50]}
-        getRowId={(row) => row.name}
-        sx={{ width: '100%' }}
-      />
+      <Paper sx={{ m: 3 }}>
+        <DataGrid
+          rows={spells.filter((spell) =>
+            searchQuery
+              .split('+')
+              .some((query) =>
+                spell.name.toLowerCase().includes(query.toLowerCase())
+              )
+          )}
+          columns={columnDescriptor}
+          onRowClick={(params) => navigate(`/spells/${params.row.name}`)}
+          initialState={{
+            pagination: {
+              paginationModel: { pageSize: 25 },
+            },
+          }}
+          pageSizeOptions={[10, 25, 50]}
+          getRowId={(row) => row.name}
+          sx={{ width: '100%' }}
+        />
+      </Paper>
     </Container>
   );
 }

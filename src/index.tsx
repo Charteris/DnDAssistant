@@ -7,7 +7,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import MonsterTable from './ts/monsters/monster-table';
 import Header from './ts/header';
 import MonsterView from './ts/monsters/monster-view';
@@ -17,9 +17,9 @@ import SpellTable from './ts/spells/spell-table';
 import SpellView from './ts/spells/spell-view';
 import Shop from './ts/shop/shop';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: '/',
+    path: '/*',
     element: <Header />,
     children: [
       {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, TextField } from '@mui/material';
+import { Container, Paper, TextField } from '@mui/material';
 import monsters from '../../res/srd_5e_monsters.json';
 import { DataGrid } from '@mui/x-data-grid';
 import { useNavigate } from 'react-router-dom';
@@ -89,31 +89,32 @@ export default function MonsterTable() {
       <TextField
         variant="filled"
         fullWidth
-        sx={{ marginBottom: 2 }}
         value={searchQuery}
         onChange={(event) => setSearchQuery(event.target.value)}
         label="Search Monsters"
         size="small"
       />
-      <DataGrid
-        rows={monsters.filter((monster) =>
-          searchQuery
-            .split('+')
-            .some((query) =>
-              monster.name.toLowerCase().includes(query.toLowerCase())
-            )
-        )}
-        columns={columnDescriptor}
-        onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-        initialState={{
-          pagination: {
-            paginationModel: { pageSize: 25 },
-          },
-        }}
-        pageSizeOptions={[10, 25, 50]}
-        getRowId={(row) => row.name}
-        sx={{ width: '100%' }}
-      />
+      <Paper sx={{ margin: 3 }}>
+        <DataGrid
+          rows={monsters.filter((monster) =>
+            searchQuery
+              .split('+')
+              .some((query) =>
+                monster.name.toLowerCase().includes(query.toLowerCase())
+              )
+          )}
+          columns={columnDescriptor}
+          onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
+          initialState={{
+            pagination: {
+              paginationModel: { pageSize: 25 },
+            },
+          }}
+          pageSizeOptions={[10, 25, 50]}
+          getRowId={(row) => row.name}
+          sx={{ width: '100%' }}
+        />
+      </Paper>
     </Container>
   );
 }
