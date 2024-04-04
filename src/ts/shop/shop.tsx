@@ -1,10 +1,20 @@
 import * as React from 'react';
-import { Container, Paper, Stack, TextField, Typography } from '@mui/material';
+import {
+  AccordionDetails,
+  AccordionSummary,
+  Container,
+  Paper,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
 import armours from '../../res/srd_5e_armour.json';
 import weapons from '../../res/srd_5e_weapons.json';
 import gears from '../../res/srd_5e_gear.json';
 import { DataGrid } from '@mui/x-data-grid';
 import { useNavigate } from 'react-router-dom';
+import { CustomAccordion } from '../shared/custom-styles';
+import { ArrowDropDown } from '@mui/icons-material';
 
 const armourColumnDescriptor = [
   {
@@ -137,6 +147,12 @@ export default function MonsterTable() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = React.useState<string>('');
 
+  const sections = [
+    { title: 'Armour', rows: armours, columns: armourColumnDescriptor },
+    { title: 'Weapons', rows: weapons, columns: weaponColumnDescriptor },
+    { title: 'Gear', rows: gears, columns: gearColumnDescriptor },
+  ];
+
   return (
     <Container>
       <TextField
@@ -145,83 +161,48 @@ export default function MonsterTable() {
         sx={{ marginBottom: 2 }}
         value={searchQuery}
         onChange={(event) => setSearchQuery(event.target.value)}
-        label="Search Monsters"
+        label="Search Armaments"
         size="small"
       />
-      <Stack spacing={2} p={3}>
-        <Paper sx={{ margin: 3 }}>
-          <Typography variant="h5" margin={1}>
-            Armour
-          </Typography>
-          <DataGrid
-            rows={armours.filter((armour) =>
-              searchQuery
-                .split('+')
-                .some((query) =>
-                  armour.name.toLowerCase().includes(query.toLowerCase())
-                )
-            )}
-            columns={armourColumnDescriptor}
-            onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-            initialState={{
-              pagination: {
-                paginationModel: { pageSize: 10 },
-              },
-            }}
-            pageSizeOptions={[10, 25, 50]}
-            getRowId={(row) => row.name}
-            sx={{ width: '100%' }}
-          />
-        </Paper>
-        <Paper sx={{ margin: 3 }}>
-          <Typography variant="h5" margin={1}>
-            Weapons
-          </Typography>
-          <DataGrid
-            rows={weapons.filter((weapon) =>
-              searchQuery
-                .split('+')
-                .some((query) =>
-                  weapon.name.toLowerCase().includes(query.toLowerCase())
-                )
-            )}
-            columns={weaponColumnDescriptor}
-            onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-            initialState={{
-              pagination: {
-                paginationModel: { pageSize: 10 },
-              },
-            }}
-            pageSizeOptions={[10, 25, 50]}
-            getRowId={(row) => row.name}
-            sx={{ width: '100%' }}
-          />
-        </Paper>
-        <Paper sx={{ margin: 3 }}>
-          <Typography variant="h5" margin={1}>
-            Adventuring Gear
-          </Typography>
-          <DataGrid
-            rows={gears.filter((gear) =>
-              searchQuery
-                .split('+')
-                .some((query) =>
-                  gear.name.toLowerCase().includes(query.toLowerCase())
-                )
-            )}
-            columns={gearColumnDescriptor}
-            onRowClick={(params) => navigate(`/monsters/${params.row.name}`)}
-            initialState={{
-              pagination: {
-                paginationModel: { pageSize: 10 },
-              },
-            }}
-            pageSizeOptions={[10, 25, 50]}
-            getRowId={(row) => row.name}
-            sx={{ width: '100%' }}
-          />
-        </Paper>
-      </Stack>
+      <Paper sx={{ p: 3 }}>
+        {sections.map(({ title, rows, columns }) => (
+          <CustomAccordion>
+            <AccordionSummary
+              expandIcon={<ArrowDropDown />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography variant="h5" margin={1}>
+                {title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Paper sx={{ m: 2 }}>
+                <DataGrid
+                  rows={rows.filter((armament) =>
+                    searchQuery
+                      .split('+')
+                      .some((query) =>
+                        armament.name
+                          .toLowerCase()
+                          .includes(query.toLowerCase())
+                      )
+                  )}
+                  columns={columns}
+                  initialState={{
+                    pagination: {
+                      paginationModel: { pageSize: 10 },
+                    },
+                  }}
+                  pageSizeOptions={[10, 25, 50]}
+                  getRowId={(row) => row.name}
+                  sx={{ width: '100%' }}
+                />
+              </Paper>
+            </AccordionDetails>
+          </CustomAccordion>
+        ))}
+      </Paper>
     </Container>
   );
 }

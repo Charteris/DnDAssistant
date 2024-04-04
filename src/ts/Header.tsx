@@ -24,14 +24,15 @@ const Header = () => {
       <AppBar position="sticky" sx={{ marginBottom: '2%' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters sx={{ alignItems: 'center' }}>
-            <Typography variant="h4" component="h1">
-              DnD Assistant
-            </Typography>
+            <Typography variant="h4">DnD Assistant</Typography>
             <Stack
               direction="row"
               divider={<Divider orientation="vertical" flexItem />}
               marginLeft={5}
               spacing={1}
+              justifyContent="center"
+              flexWrap="wrap"
+              useFlexGap
             >
               {pages.map((page) => (
                 <MenuItem

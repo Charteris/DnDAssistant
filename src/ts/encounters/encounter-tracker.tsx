@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
 import {
   Stack,
   Box,
@@ -12,140 +12,131 @@ import {
   CardContent,
   InputAdornment,
 } from '@mui/material';
-import { Shield, Favorite, Speed, Delete } from '@mui/icons-material';
+import { Shield, Favorite, Speed, Delete, Add } from '@mui/icons-material';
 import { Monster } from '../types/Monster';
 import MonsterCard from '../monsters/monster-card';
+import SelectMonster from './select-monster';
+import PageIterator from '../shared/page-iterator';
+import useTrackEncounter from './useTrackEncounter';
 
-type RemainingMonster = {
-  monsterIndex: number;
-  name: string;
-  maxHP: string;
-  hp: number;
-  ac: number;
-  initiative: number;
-};
-
-const getRemainingMonsters = (monsters: Monster[]): RemainingMonster[] => {
-  return monsters.map((monster, index) => {
-    const modifier = parseInt(monster.DEX_mod.replace(/([(+)])/g, ''));
-    const initiative = Math.floor(Math.random() * 20) + modifier;
-    return {
-      monsterIndex: index,
-      name: monster.name,
-      maxHP: monster.HP,
-      hp: parseInt(monster.HP),
-      ac: parseInt(monster.AC),
-      initiative,
-    };
-  });
-};
+const PAGE_SIZE = 5;
 
 const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
   monstersInCombat,
 }) => {
-  const [selectedMonster, setSelectedMonster] = useState<Monster>(
-    monstersInCombat[0]
-  );
-  const [remainingMonsters, setRemainingMonsters] = useState(
-    getRemainingMonsters(monstersInCombat)
-  );
+  const {
+    remainingMonsters,
+    identifiedMonster,
+    onAddMonster,
+    onDeleteMonster,
+    setSelectedMonster,
+    onUpdateHealth,
+    pageNumber,
+    setPageNumber,
+  } = useTrackEncounter(monstersInCombat);
+  const pageOffset = pageNumber * PAGE_SIZE;
 
-  if (selectedMonster === undefined && monstersInCombat.length > 0) {
-    setSelectedMonster(monstersInCombat[0]);
-    setRemainingMonsters(getRemainingMonsters(monstersInCombat));
-  }
-
-  // const setTempHPByIndex = useCallback(
-  //   (newHP: number, index: number) => {
-  //     const newTempHPs = [...tempHP];
-  //     newTempHPs[index] = newHP;
-  //     setTempHP(newTempHPs);
-  //   },
-  //   [tempHP, setTempHP]
-  // );
-
-  return monstersInCombat.length === 0 ? (
-    <Container>
-      <Paper sx={{ m: 2, p: 3, display: 'flex', justifyContent: 'center' }}>
-        <Typography>Could not find any worthy opponents</Typography>
-      </Paper>
-    </Container>
-  ) : (
+  return (
     <Stack direction="row" justifyContent="space-around">
       <Box sx={{ width: '70%' }}>
-        <MonsterCard monster={selectedMonster} />
+        {!identifiedMonster ? (
+          <Container>
+            <Paper
+              sx={{ m: 2, p: 3, display: 'flex', justifyContent: 'center' }}
+            >
+              <Typography variant="h5">No monster selected</Typography>
+            </Paper>
+          </Container>
+        ) : (
+          <MonsterCard monster={identifiedMonster} />
+        )}
       </Box>
       <Card sx={{ m: 2, width: '30%' }}>
         <CardContent>
-          <Stack spacing={2} direction="column" alignItems="center">
-            <Typography variant="h5">Enemies</Typography>
-            {remainingMonsters.map((monster, index) => (
-              <Paper variant="outlined" sx={{ p: 1 }}>
-                <Stack
-                  spacing={0.5}
-                  direction="column"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Button
-                    variant="outlined"
-                    onClick={() =>
-                      setSelectedMonster(monstersInCombat[monster.monsterIndex])
-                    }
-                    fullWidth
-                  >
-                    <Typography>{monster.name}</Typography>
-                  </Button>
-                  <TextField
-                    hiddenLabel
-                    value={monster.hp}
-                    // onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    //   setTempHPByIndex(Number(event.target.value), index);
-                    // }}
-                    placeholder="HP"
-                    variant="filled"
-                    size="small"
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start" sx={{ mr: 2 }}>
-                          <Favorite />
-                        </InputAdornment>
-                      ),
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <Typography marginRight={2}>
-                            {` / ${monster.maxHP.split(' ')[0]}`}
-                          </Typography>
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
+          <Stack spacing={1} direction="column" alignItems="center">
+            <Stack direction="row" alignItems="center" justifyContent="center">
+              <Box />
+              <Typography variant="h5">Enemies</Typography>
+              <SelectMonster onSelectMonster={onAddMonster} />
+            </Stack>
+            {remainingMonsters.length > 0 && (
+              <Typography variant="subtitle1" mt={-1}>
+                {`(${remainingMonsters.length} monster(s) remaining)`}
+              </Typography>
+            )}
+            {remainingMonsters
+              .slice(pageOffset, pageOffset + PAGE_SIZE)
+              .sort((a, b) => (a.initiative > b.initiative ? 1 : -1))
+              .map((monster) => (
+                <Paper variant="outlined" sx={{ p: 1 }}>
                   <Stack
-                    spacing={8}
-                    direction="row"
-                    justifyContent="space-between"
+                    spacing={0.5}
+                    direction="column"
                     alignItems="center"
+                    justifyContent="center"
                   >
-                    <Stack spacing={1} direction="row">
-                      <Shield />
-                      <Typography marginRight={2}>{monster.ac}</Typography>
-                    </Stack>
-                    <Stack spacing={1} direction="row">
-                      <Speed />
-                      <Typography marginRight={2}>
-                        {monster.initiative}
-                      </Typography>
-                    </Stack>
-                    <IconButton
-                      size="small"
-                      onClick={() => monstersInCombat.splice(index, 1)}
+                    <Button
+                      variant="outlined"
+                      onClick={() => setSelectedMonster(monster)}
+                      fullWidth
                     >
-                      <Delete />
-                    </IconButton>
+                      <Typography>{monster.name}</Typography>
+                    </Button>
+                    <TextField
+                      hiddenLabel
+                      value={monster.hp}
+                      onChange={onUpdateHealth.bind(this, monster.uuid)}
+                      placeholder="HP"
+                      variant="filled"
+                      size="small"
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start" sx={{ mr: 2 }}>
+                            <Favorite />
+                          </InputAdornment>
+                        ),
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Typography marginRight={2}>
+                              {` / ${monster.maxHP.split(' ')[0]}`}
+                            </Typography>
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                    <Stack
+                      spacing={8}
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Stack spacing={1} direction="row">
+                        <Shield />
+                        <Typography marginRight={2}>{monster.ac}</Typography>
+                      </Stack>
+                      <Stack spacing={1} direction="row">
+                        <Speed />
+                        <Typography marginRight={2}>
+                          {monster.initiative}
+                        </Typography>
+                      </Stack>
+                      <IconButton
+                        size="small"
+                        onClick={() => onDeleteMonster(monster)}
+                      >
+                        <Delete />
+                      </IconButton>
+                    </Stack>
                   </Stack>
-                </Stack>
-              </Paper>
-            ))}
+                </Paper>
+              ))}
+            {remainingMonsters.length > 0 && (
+              <PageIterator
+                page={pageNumber}
+                maxLength={Math.floor(remainingMonsters.length / PAGE_SIZE)}
+                pageSetter={setPageNumber}
+              />
+            )}
           </Stack>
         </CardContent>
       </Card>

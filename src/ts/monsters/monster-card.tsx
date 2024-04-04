@@ -45,7 +45,12 @@ const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
               <CardMedia
                 component="img"
                 src={monster.img_url}
-                sx={{ width: '50%', aspectRatio: '1/1' }}
+                sx={{
+                  width: '50%',
+                  aspectRatio: '1/1',
+                  objectFit: 'contain',
+                  backgroundColor: 'secondary',
+                }}
               />
               <Stack
                 direction="column"

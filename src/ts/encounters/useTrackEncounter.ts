@@ -1,0 +1,106 @@
+import { useCallback, useEffect, useState } from 'react';
+import { Monster } from '../types/Monster';
+import monsters from '../../res/srd_5e_monsters.json';
+
+type RemainingMonster = {
+  uuid: string;
+  name: string;
+  maxHP: string;
+  hp: number | null;
+  ac: number;
+  initiative: number;
+};
+
+const createRemainingMonster = (monster: Monster): RemainingMonster => {
+  const modifier = parseInt(monster.DEX_mod.replace(/([(+)])/g, ''));
+  const initiative = Math.floor(Math.random() * 20) + modifier;
+  return {
+    uuid: crypto.randomUUID(),
+    name: monster.name,
+    maxHP: monster.HP,
+    hp: parseInt(monster.HP),
+    ac: parseInt(monster.AC),
+    initiative,
+  };
+};
+
+const getMonstersFromEncounter = (monsters: Monster[]): RemainingMonster[] => {
+  return monsters
+    .map((monster) => createRemainingMonster(monster))
+    .sort((a, b) => (a.initiative < b.initiative ? 1 : -1));
+};
+
+const useTrackEncounter = (monstersInCombat: Monster[]) => {
+  const [remainingMonsters, setRemainingMonsters] = useState(
+    getMonstersFromEncounter(monstersInCombat)
+  );
+  const [selectedMonster, setSelectedMonster] =
+    useState<RemainingMonster | null>(remainingMonsters[0]);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  useEffect(() => {
+    const monstersInEncounter = getMonstersFromEncounter(monstersInCombat);
+    setRemainingMonsters(monstersInEncounter);
+    setSelectedMonster(monstersInEncounter[0]);
+  }, [monstersInCombat]);
+
+  const onUpdateHealth = useCallback(
+    (uuid: string, event: React.ChangeEvent<HTMLInputElement>) => {
+      const newRemainingMonsters = [...remainingMonsters];
+      const index = newRemainingMonsters.findIndex(
+        (monster) => monster.uuid === uuid
+      );
+      const newHealth = parseFloat(event.target.value);
+      newRemainingMonsters[index].hp = isNaN(newHealth) ? null : newHealth;
+      setRemainingMonsters(newRemainingMonsters);
+    },
+    [remainingMonsters, setRemainingMonsters]
+  );
+
+  const onDeleteMonster = useCallback(
+    (monster: RemainingMonster) => {
+      if (selectedMonster?.uuid === monster.uuid) {
+        setSelectedMonster(null);
+      }
+      const filteredRemainingMonsters = remainingMonsters.filter(
+        (remainingMonster) => remainingMonster.uuid !== monster.uuid
+      );
+      setRemainingMonsters(filteredRemainingMonsters);
+    },
+    [
+      selectedMonster,
+      remainingMonsters,
+      setSelectedMonster,
+      setRemainingMonsters,
+    ]
+  );
+
+  const onAddMonster = useCallback(
+    (monster: Monster) => {
+      const newRemainingMonsters = [
+        ...remainingMonsters,
+        createRemainingMonster(monster),
+      ];
+      setRemainingMonsters(newRemainingMonsters);
+      setSelectedMonster(newRemainingMonsters[0]);
+    },
+    [remainingMonsters, setRemainingMonsters, setSelectedMonster]
+  );
+
+  const identifiedMonster = monsters.find(
+    (monster) => selectedMonster?.name === monster.name
+  );
+
+  return {
+    remainingMonsters,
+    identifiedMonster,
+    onAddMonster,
+    onDeleteMonster,
+    setSelectedMonster,
+    onUpdateHealth,
+    pageNumber,
+    setPageNumber,
+  };
+};
+
+export default useTrackEncounter;

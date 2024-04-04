@@ -1,4 +1,4 @@
-const MONSTER_TYPES = [
+export const MONSTER_TYPES = [
   'Aberration',
   'Beast',
   'Celestial',
@@ -14,7 +14,7 @@ const MONSTER_TYPES = [
   'Plant',
   'Undead',
 ];
-const ALIGNMENTS = [
+export const ALIGNMENTS = [
   'Lawful',
   'Neutral',
   'Chaotic',
@@ -23,9 +23,9 @@ const ALIGNMENTS = [
   'Unaligned',
   'Any',
 ];
-const SIZES = ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'];
-const DIFFICULTIES = ['Easy', 'Medium', 'Hard', 'Deadly'];
-const EXPERIENCE_THRESHOLDS = [
+export const SIZES = ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'];
+export const DIFFICULTIES = ['Easy', 'Medium', 'Hard', 'Deadly'];
+export const EXPERIENCE_THRESHOLDS = [
   [25, 50, 75, 100], // 1st level
   [50, 100, 150, 200], // 2nd level
   [75, 150, 225, 400], // 3rd level
@@ -47,7 +47,7 @@ const EXPERIENCE_THRESHOLDS = [
   [2400, 4900, 7300, 10900], // 19th level
   [2800, 5700, 8500, 12700], // 20th level
 ];
-const ENCOUNTER_MULTIPLIERS = [
+export const ENCOUNTER_MULTIPLIERS = [
   { numberOfMonsters: 1, multiplier: 1 },
   { numberOfMonsters: 2, multiplier: 1.5 },
   { numberOfMonsters: 3, multiplier: 2 },
@@ -55,12 +55,5 @@ const ENCOUNTER_MULTIPLIERS = [
   { numberOfMonsters: 11, multiplier: 3 },
   { numberOfMonsters: 15, multiplier: 4 },
 ];
-
-export {
-  MONSTER_TYPES,
-  ALIGNMENTS,
-  SIZES,
-  DIFFICULTIES,
-  EXPERIENCE_THRESHOLDS,
-  ENCOUNTER_MULTIPLIERS,
-};
+export const MIN_EXPERIENCE = 10;
+export const MAX_EXPERIENCE = 12700;

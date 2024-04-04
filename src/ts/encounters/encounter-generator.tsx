@@ -4,10 +4,19 @@ import {
   Button,
   Container,
   Paper,
+  Slider,
   Stack,
   TextField,
+  Typography,
 } from '@mui/material';
-import { ALIGNMENTS, DIFFICULTIES, MONSTER_TYPES, SIZES } from '../constants';
+import {
+  ALIGNMENTS,
+  DIFFICULTIES,
+  MAX_EXPERIENCE,
+  MIN_EXPERIENCE,
+  MONSTER_TYPES,
+  SIZES,
+} from '../constants';
 import useGenerateEncounter from './useGenerateEncounter';
 import EncounterTracker from './encounter-tracker';
 
@@ -24,6 +33,8 @@ export default function EncounterGenerator() {
     setPartySize,
     difficulty,
     setDifficulty,
+    experience,
+    setExperience,
     determineMonstersInEncounter,
     monstersInCombat,
   } = useGenerateEncounter();
@@ -45,7 +56,13 @@ export default function EncounterGenerator() {
             label="Keywords"
             size="small"
           />
-          <Stack spacing={1} direction="row" width="100%">
+          <Stack
+            spacing={1}
+            direction="row"
+            width="100%"
+            flexWrap="wrap"
+            useFlexGap
+          >
             <Autocomplete
               multiple
               options={MONSTER_TYPES}
@@ -71,6 +88,14 @@ export default function EncounterGenerator() {
               sx={{ flexGrow: 1 }}
               renderInput={(params) => <TextField {...params} label="Size" />}
             />
+          </Stack>
+          <Stack
+            spacing={1}
+            direction="row"
+            width="100%"
+            flexWrap="wrap"
+            useFlexGap
+          >
             <Autocomplete
               options={[
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -102,6 +127,39 @@ export default function EncounterGenerator() {
               renderInput={(params) => (
                 <TextField {...params} label="Difficulty" />
               )}
+            />
+          </Stack>
+          <Stack
+            spacing={2}
+            direction="row"
+            justifyContent="space-around"
+            alignItems="center"
+          >
+            <TextField
+              size="small"
+              label="Max"
+              value={experience[0]}
+              onChange={(event) =>
+                setExperience([parseInt(event.target.value), experience[1]])
+              }
+            />
+            <Stack direction="column" flexGrow={2}>
+              <Typography variant="subtitle2">Experience Range</Typography>
+              <Slider
+                value={experience}
+                onChange={(_e, newValue) => setExperience(newValue as number[])}
+                valueLabelDisplay="auto"
+                min={MIN_EXPERIENCE}
+                max={MAX_EXPERIENCE}
+              />
+            </Stack>
+            <TextField
+              size="small"
+              label="Max"
+              value={experience[1]}
+              onChange={(event) =>
+                setExperience([experience[0], parseInt(event.target.value)])
+              }
             />
           </Stack>
           <Button variant="contained" onClick={determineMonstersInEncounter}>

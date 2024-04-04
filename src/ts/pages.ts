@@ -15,6 +15,7 @@ const pages: Page[] = [
   { label: 'encounter', name: 'Encounters', path: '/encounter' },
   { label: 'spells', name: 'Spells', path: '/spells' },
   { label: 'shop', name: 'Gear', path: '/gear' },
+  { label: 'campaign', name: 'Campaign', path: '/campaign' },
 ];
 
 export { pages };
