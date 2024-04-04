@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/DnDAssistant/static/js/main.2c00b5a3.chunk.js",
-    "main.js.map": "/DnDAssistant/static/js/main.2c00b5a3.chunk.js.map",
+    "main.js": "/DnDAssistant/static/js/main.75296e84.chunk.js",
+    "main.js.map": "/DnDAssistant/static/js/main.75296e84.chunk.js.map",
     "runtime~main.js": "/DnDAssistant/static/js/runtime~main.c9fe5edb.js",
     "runtime~main.js.map": "/DnDAssistant/static/js/runtime~main.c9fe5edb.js.map",
     "static/js/2.b77e118f.chunk.js": "/DnDAssistant/static/js/2.b77e118f.chunk.js",
     "static/js/2.b77e118f.chunk.js.map": "/DnDAssistant/static/js/2.b77e118f.chunk.js.map",
     "index.html": "/DnDAssistant/index.html",
-    "precache-manifest.a828dfe347dcf53dce0e3df83a59b413.js": "/DnDAssistant/precache-manifest.a828dfe347dcf53dce0e3df83a59b413.js",
+    "precache-manifest.61d1546d8999e29a2233404f04bba53a.js": "/DnDAssistant/precache-manifest.61d1546d8999e29a2233404f04bba53a.js",
     "service-worker.js": "/DnDAssistant/service-worker.js",
     "static/media/Avandria.png": "/DnDAssistant/static/media/Avandria.10b752da.png"
   }
