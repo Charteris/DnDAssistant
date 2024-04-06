@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import monsters from '../../res/srd_5e_monsters.json';
 import {
   DIFFICULTIES,

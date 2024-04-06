@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Monster } from '../types/Monster';
 import monsters from '../../res/srd_5e_monsters.json';
+import { v4 as uuidv4 } from 'uuid';
 
 type RemainingMonster = {
   uuid: string;
@@ -15,7 +16,7 @@ const createRemainingMonster = (monster: Monster): RemainingMonster => {
   const modifier = parseInt(monster.DEX_mod.replace(/([(+)])/g, ''));
   const initiative = Math.floor(Math.random() * 20) + modifier;
   return {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     name: monster.name,
     maxHP: monster.HP,
     hp: parseInt(monster.HP),
@@ -45,12 +46,11 @@ const useTrackEncounter = (monstersInCombat: Monster[]) => {
   }, [monstersInCombat]);
 
   const onUpdateHealth = useCallback(
-    (uuid: string, event: React.ChangeEvent<HTMLInputElement>) => {
+    (uuid: string, newHealth: number) => {
       const newRemainingMonsters = [...remainingMonsters];
       const index = newRemainingMonsters.findIndex(
         (monster) => monster.uuid === uuid
       );
-      const newHealth = parseFloat(event.target.value);
       newRemainingMonsters[index].hp = isNaN(newHealth) ? null : newHealth;
       setRemainingMonsters(newRemainingMonsters);
     },

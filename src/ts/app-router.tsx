@@ -8,7 +8,7 @@ import Mechanics from './mechanics/mechanics';
 import SpellTable from './spells/spell-table';
 import SpellView from './spells/spell-view';
 import Shop from './shop/shop';
-import AvandriaMap from './campaigns/avandria-map';
+import CampaignManager from './campaigns/campaign-manager';
 
 const AppRouter = () => {
   const router = createHashRouter([
@@ -46,7 +46,7 @@ const AppRouter = () => {
         },
         {
           path: 'campaign',
-          element: <AvandriaMap />,
+          element: <CampaignManager />,
         },
       ],
     },

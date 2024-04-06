@@ -1,0 +1,47 @@
+{
+  "map": "Avandria.png",
+  "mapWidth": 15360,
+  "mapHeight": 8112,
+  "markers": [
+    {
+      "x": 7920,
+      "y": 3600,
+      "title": "Dragonbane Citadel",
+      "type": "Kingdom",
+      "image": "dragonbane_citadel.png",
+      "description": "Also referred to as the Kingdom of Avandria. Dragonbane Citadel is the capital of Avandria and home to the most ferocious warlords of the grand inquisitors."
+    },
+    {
+      "x": 11660,
+      "y": 2410,
+      "title": "Oakstead",
+      "type": "City",
+      "image": "oakstead.png",
+      "description": "Oakstead is the primary trade route for neighbouring regions willing to venture to Avandria. It is regarded the safest city in Avandria as it is protected by a high-noble of the grand inquisitors."
+    },
+    {
+      "x": 11270,
+      "y": 2045,
+      "title": "Bridgewater",
+      "type": "Town",
+      "image": "bridgewater.png",
+      "description": "Bridgewater is a quaint farming town which provisions neighbouring cities and local bandit groups with fresh harvests. Due to constant threat from conflict gangs, they often rely on the protection from a deadly bandit group bearing the insignia of a hydra with one of its heads cut off."
+    },
+    {
+      "x": 11570,
+      "y": 1880,
+      "title": "Sable Creek",
+      "type": "Village",
+      "image": "sable_creek.png",
+      "description": "Sable Creek is a small, quiet fishing village. Whilst they mostly keep to themselves, the locals are often seen in Oakstead gathering supplies each month. That is, until 3 months ago..."
+    },
+    {
+      "x": 11100,
+      "y": 2380,
+      "title": "Stormfall Grove",
+      "type": "City",
+      "image": "stormfall_grove.png",
+      "description": "Stormfall Grove is home to the Ravenarch Guild which are notorious for their prowess in relic hunting whilst also being known as a group of ferocious killers. The city was once a small town full of refugees but was renamed after the fall of Greytooth due to the intense storms incurred by the dense ash clouds nearby."
+    }
+  ]
+}

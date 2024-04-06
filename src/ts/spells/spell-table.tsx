@@ -77,13 +77,12 @@ export default function MonsterTable() {
       <TextField
         variant="filled"
         fullWidth
-        sx={{ marginBottom: 2 }}
         value={searchQuery}
         onChange={(event) => setSearchQuery(event.target.value)}
         label="Search Spells"
         size="small"
       />
-      <Paper sx={{ m: 3 }}>
+      <Paper sx={{ m: 1 }}>
         <DataGrid
           rows={spells.filter((spell) =>
             searchQuery
@@ -101,7 +100,6 @@ export default function MonsterTable() {
           }}
           pageSizeOptions={[10, 25, 50]}
           getRowId={(row) => row.name}
-          sx={{ width: '100%' }}
         />
       </Paper>
     </Container>

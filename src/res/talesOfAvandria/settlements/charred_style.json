@@ -1,0 +1,14 @@
+{
+  "colorPaper": "#A59E91",
+  "colorDark": "#1A1917",
+  "colorRoof": "#896062",
+  "colorWater": "#C1CCC9",
+  "colorGreen": "#94968B",
+  "colorRoad": "#A5A07D",
+  "colorWall": "#3F3D38",
+  "colorTree": "#757A69",
+  "colorLight": "#DBCEAB",
+  "tintMethod": "Spectrum",
+  "tintStrength": "30",
+  "weathering": "20"
+}

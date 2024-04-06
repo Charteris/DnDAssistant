@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import {
   Stack,
   Box,
@@ -12,7 +12,7 @@ import {
   CardContent,
   InputAdornment,
 } from '@mui/material';
-import { Shield, Favorite, Speed, Delete, Add } from '@mui/icons-material';
+import { Shield, Favorite, Speed, Delete, Event } from '@mui/icons-material';
 import { Monster } from '../types/Monster';
 import MonsterCard from '../monsters/monster-card';
 import SelectMonster from './select-monster';
@@ -85,7 +85,12 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
                     <TextField
                       hiddenLabel
                       value={monster.hp}
-                      onChange={onUpdateHealth.bind(this, monster.uuid)}
+                      onChange={(event) =>
+                        onUpdateHealth(
+                          monster.uuid,
+                          parseFloat(event.target.value)
+                        )
+                      }
                       placeholder="HP"
                       variant="filled"
                       size="small"

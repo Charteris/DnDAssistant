@@ -12,6 +12,7 @@ import {
   Stack,
   Divider,
   MenuItem,
+  Button,
 } from '@mui/material';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { pages } from './pages';
@@ -24,13 +25,15 @@ const Header = () => {
       <AppBar position="sticky" sx={{ marginBottom: '2%' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters sx={{ alignItems: 'center' }}>
-            <Typography variant="h4">DnD Assistant</Typography>
+            <Button onClick={() => navigate('')}>
+              <Typography variant="h4">DnD Assistant</Typography>
+            </Button>
             <Stack
               direction="row"
               divider={<Divider orientation="vertical" flexItem />}
               marginLeft={5}
               spacing={1}
-              justifyContent="center"
+              justifySelf="center"
               flexWrap="wrap"
               useFlexGap
             >

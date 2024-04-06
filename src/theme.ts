@@ -11,6 +11,15 @@ const theme = createTheme({
   typography: {
     fontSize: 12,
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: '#6b6b6b #2b2b2b',
+        },
+      },
+    },
+  },
 });
 
 export default theme;
