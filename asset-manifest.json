@@ -1,6 +1,8 @@
 {
   "files": {
-    "main.js": "/DnDAssistant/static/js/main.929e6222.js",
+    "main.js": "/DnDAssistant/static/js/main.6a3b20e6.js",
+    "static/js/246.36e86ec2.chunk.js": "/DnDAssistant/static/js/246.36e86ec2.chunk.js",
+    "static/js/784.1f1a28f1.chunk.js": "/DnDAssistant/static/js/784.1f1a28f1.chunk.js",
     "static/media/Avandria.png": "/DnDAssistant/static/media/Avandria.aba68b144e09ff63f465.png",
     "static/media/dragonbane_citadel.png": "/DnDAssistant/static/media/dragonbane_citadel.ca39348650a3c5ea8f65.png",
     "static/media/stormfall_grove.png": "/DnDAssistant/static/media/stormfall_grove.ee4556aa6da26bbc3c53.png",
@@ -8,9 +10,11 @@
     "static/media/bridgewater.png": "/DnDAssistant/static/media/bridgewater.b70ff67b6ff7a7aab68e.png",
     "static/media/sable_creek.png": "/DnDAssistant/static/media/sable_creek.bca8f4c52f10b383fc9f.png",
     "index.html": "/DnDAssistant/index.html",
-    "main.929e6222.js.map": "/DnDAssistant/static/js/main.929e6222.js.map"
+    "main.6a3b20e6.js.map": "/DnDAssistant/static/js/main.6a3b20e6.js.map",
+    "246.36e86ec2.chunk.js.map": "/DnDAssistant/static/js/246.36e86ec2.chunk.js.map",
+    "784.1f1a28f1.chunk.js.map": "/DnDAssistant/static/js/784.1f1a28f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.929e6222.js"
+    "static/js/main.6a3b20e6.js"
   ]
 }
