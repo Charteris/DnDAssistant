@@ -1,19 +1,15 @@
-import React, { Component, FC, Suspense, lazy } from 'react';
-import {
-  Accordion,
-  Box,
-  Paper,
-  Skeleton,
-  Stack,
-  Typography,
-} from '@mui/material';
+import React, { Suspense, lazy } from 'react';
+import { Box, Paper, Skeleton, Stack, Typography } from '@mui/material';
 import mechanics from '../../res/rules/06 mechanics.json';
 import combat from '../../res/rules/07 combat.json';
 import races from '../../res/rules/01 races.json';
 import classes from '../../res/rules/02 classes.json';
 import conditions from '../../res/rules/12 conditions.json';
 import other from '../../res/rules/09 running.json';
-import RenderJsonRecursive from '../shared/render-json-recursive';
+
+const RenderJsonRecursive = lazy(
+  () => import('../shared/render-json-recursive')
+);
 
 type UserGuide = {
   title: string;
@@ -34,7 +30,13 @@ export default function Mechanics() {
         <Box>
           <Typography variant="h5">{title}</Typography>
           <Paper sx={{ p: 1, m: 1 }}>
-            {guides.map((guide) => RenderJsonRecursive({ instance: guide }))}
+            <Suspense
+              fallback={<Skeleton animation="wave" variant="rounded" />}
+            >
+              {guides.map((guide) => (
+                <RenderJsonRecursive instance={guide} />
+              ))}
+            </Suspense>
           </Paper>
         </Box>
       ))}
