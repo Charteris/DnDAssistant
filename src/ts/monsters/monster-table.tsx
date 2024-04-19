@@ -1,96 +1,56 @@
-import * as React from 'react';
-import { Container, Paper, TextField } from '@mui/material';
+import React, { FC, useState, useCallback } from 'react';
+import {
+  Container,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  Paper,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
 import monsters from '../../res/srd_5e_monsters.json';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
-import { useNavigate } from 'react-router-dom';
+import { Monster } from '../types/Monster';
+import PageIterator from '../shared/page-iterator';
+import MonsterCard from './monster-card';
+import { Close } from '@mui/icons-material';
+import { monsterColumnDescriptor } from './monster-column-descriptor';
 
-const columnDescriptor = [
-  {
-    field: 'name',
-    headerName: 'Name',
-    flex: 1,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'AC',
-    flex: 1,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'HP',
-    flex: 1,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'Speed',
-    flex: 1,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'STR',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'DEX',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'CON',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'INT',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'WIS',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'CHA',
-    flex: 0.25,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'Senses',
-    flex: 1,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'Challenge',
-    flex: 1,
-    sortable: true,
-    filterable: true,
-  },
-];
-
-const MonsterTable: React.FC<{
+const MonsterTable: FC<{
   onRowClick?: (params: GridRowParams) => void;
   props?: object;
 }> = ({ onRowClick, props = {} }) => {
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = React.useState<string>('');
-  const onViewMonster = (params: GridRowParams) =>
-    navigate(`/monsters/${params.row.name}`);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedMonster, setSelectedMonster] = useState<Monster | null>(null);
+  const [monsterIndex, setMonsterIndex] = useState<number>(0);
+  const filteredMonsters = monsters.filter((monster) =>
+    searchQuery
+      .split('+')
+      .some((query) => monster.name.toLowerCase().includes(query.toLowerCase()))
+  );
+
+  const onViewMonster = useCallback(
+    (params: GridRowParams) => {
+      setSelectedMonster(params.row);
+      setMonsterIndex(
+        monsters.findIndex((monster) => monster.name === params.row.name)
+      );
+    },
+    [selectedMonster, setSelectedMonster, setMonsterIndex]
+  );
+
+  const onViewNextMonster = useCallback(
+    (newPage: number) => {
+      setMonsterIndex(newPage);
+      setSelectedMonster(filteredMonsters[newPage]);
+    },
+    [filteredMonsters, setSelectedMonster]
+  );
 
   return (
-    <Container>
+    <Container maxWidth="xl">
       <TextField
         variant="filled"
         fullWidth
@@ -101,14 +61,8 @@ const MonsterTable: React.FC<{
       />
       <Paper sx={{ margin: 1 }}>
         <DataGrid
-          rows={monsters.filter((monster) =>
-            searchQuery
-              .split('+')
-              .some((query) =>
-                monster.name.toLowerCase().includes(query.toLowerCase())
-              )
-          )}
-          columns={columnDescriptor}
+          rows={filteredMonsters}
+          columns={monsterColumnDescriptor}
           onRowClick={onRowClick ?? onViewMonster}
           initialState={{
             pagination: {
@@ -120,6 +74,36 @@ const MonsterTable: React.FC<{
           {...props}
         />
       </Paper>
+      <Dialog
+        open={selectedMonster !== null}
+        onClose={() => setSelectedMonster(null)}
+        maxWidth="xl"
+      >
+        <DialogTitle>
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Typography variant="h5">Monster View</Typography>
+            <IconButton onClick={() => setSelectedMonster(null)}>
+              <Close />
+            </IconButton>
+          </Stack>
+        </DialogTitle>
+        <DialogContent>
+          <Container sx={{ justifyContent: 'center', alignContent: 'center' }}>
+            {selectedMonster !== null && (
+              <MonsterCard monster={selectedMonster} />
+            )}
+            <PageIterator
+              page={monsterIndex}
+              maxLength={monsters.length}
+              pageSetter={onViewNextMonster}
+            />
+          </Container>
+        </DialogContent>
+      </Dialog>
     </Container>
   );
 };

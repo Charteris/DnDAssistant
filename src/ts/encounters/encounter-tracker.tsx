@@ -17,7 +17,7 @@ import { Monster } from '../types/Monster';
 import MonsterCard from '../monsters/monster-card';
 import SelectMonster from './select-monster';
 import PageIterator from '../shared/page-iterator';
-import useTrackEncounter from './useTrackEncounter';
+import useTrackEncounter from './use-track-encounter';
 
 const PAGE_SIZE = 5;
 

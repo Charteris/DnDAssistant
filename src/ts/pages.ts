@@ -6,14 +6,20 @@
 export type Page = {
   label: string;
   name: string;
-  path: string;
+  path: string | Page[];
 };
 
 const pages: Page[] = [
-  { label: 'monsters', name: 'Monsters', path: '/monsters' },
+  {
+    label: 'resources',
+    name: 'Resources',
+    path: [
+      { label: 'monsters', name: 'Monsters', path: '/monsters' },
+      { label: 'spells', name: 'Spells', path: '/spells' },
+      { label: 'shop', name: 'Gear', path: '/gear' },
+    ],
+  },
   { label: 'encounter', name: 'Encounters', path: '/encounter' },
-  { label: 'spells', name: 'Spells', path: '/spells' },
-  { label: 'shop', name: 'Gear', path: '/gear' },
   { label: 'campaign', name: 'Campaign', path: '/campaign' },
 ];
 
