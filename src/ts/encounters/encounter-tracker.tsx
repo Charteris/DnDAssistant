@@ -12,7 +12,7 @@ import {
   CardContent,
   InputAdornment,
 } from '@mui/material';
-import { Shield, Favorite, Speed, Delete, Event } from '@mui/icons-material';
+import { Shield, Favorite, Speed, Delete } from '@mui/icons-material';
 import { Monster } from '../types/Monster';
 import MonsterCard from '../monsters/monster-card';
 import SelectMonster from './select-monster';
@@ -138,7 +138,7 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
             {remainingMonsters.length > 0 && (
               <PageIterator
                 page={pageNumber}
-                maxLength={Math.floor(remainingMonsters.length / PAGE_SIZE)}
+                maxLength={Math.ceil(remainingMonsters.length / PAGE_SIZE)}
                 pageSetter={setPageNumber}
               />
             )}

@@ -18,11 +18,16 @@ const PageIterator: FC<{
   };
 
   return (
-    <Stack direction="row" justifyContent="center" alignItems="center">
+    <Stack
+      spacing={1}
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+    >
       <IconButton disabled={maxLength <= 1} onClick={() => iteratePage(-1)}>
         <ArrowCircleLeftOutlined />
       </IconButton>
-      <Typography>{`Page ${page + 1}`}</Typography>
+      <Typography>{`Page ${page + 1} of ${maxLength}`}</Typography>
       <IconButton disabled={maxLength <= 1} onClick={() => iteratePage(1)}>
         <ArrowCircleRightOutlined />
       </IconButton>
