@@ -1,15 +1,20 @@
 import {
   Box,
   Container,
-  Divider,
   Paper,
+  Skeleton,
   Stack,
   Tab,
   Tabs,
   Typography,
 } from '@mui/material';
-import React, { FC, useState } from 'react';
-import AvandriaMap from './avandria-map';
+import React, { FC, Suspense, useState } from 'react';
+import CampaignMap from './campaign-map';
+
+import MapOfAvandria from '../../res/talesOfAvandria/Avandria.png';
+import MapProperties from '../../res/talesOfAvandria/Avandria.json';
+import AvandriaLore from '../../res/talesOfAvandria/AvandriaLore.json';
+import RenderJsonRecursive from '../shared/render-json-recursive';
 
 const LORE = 'Lore';
 const MAP = 'Map';
@@ -35,9 +40,20 @@ const CampaignManager: FC = () => {
           </Tabs>
         </Paper>
         <Paper sx={{ p: 1, m: 2 }}>
-          <Box sx={{ p: 2 }}>
-            {openTab === LORE && <Typography>{LORE}</Typography>}
-            {openTab === MAP && <AvandriaMap />}
+          <Box sx={{ p: 2, textAlign: 'left' }}>
+            {openTab === LORE && (
+              <Suspense
+                fallback={<Skeleton animation="wave" variant="rounded" />}
+              >
+                <RenderJsonRecursive instance={AvandriaLore} />
+              </Suspense>
+            )}
+            {openTab === MAP && (
+              <CampaignMap
+                campaignMap={MapOfAvandria}
+                mapProperties={MapProperties}
+              />
+            )}
             {openTab === ADVENTURE_LOG && (
               <Typography>{ADVENTURE_LOG}</Typography>
             )}

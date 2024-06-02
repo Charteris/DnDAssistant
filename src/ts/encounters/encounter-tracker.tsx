@@ -12,12 +12,12 @@ import {
   CardContent,
   InputAdornment,
 } from '@mui/material';
-import { Shield, Favorite, Speed, Delete, Event } from '@mui/icons-material';
+import { Shield, Favorite, Speed, Delete } from '@mui/icons-material';
 import { Monster } from '../types/Monster';
 import MonsterCard from '../monsters/monster-card';
 import SelectMonster from './select-monster';
 import PageIterator from '../shared/page-iterator';
-import useTrackEncounter from './useTrackEncounter';
+import useTrackEncounter from './use-track-encounter';
 
 const PAGE_SIZE = 5;
 
@@ -27,7 +27,7 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
   const {
     remainingMonsters,
     identifiedMonster,
-    onAddMonster,
+    onAddMonsters,
     onDeleteMonster,
     setSelectedMonster,
     onUpdateHealth,
@@ -57,7 +57,7 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
             <Stack direction="row" alignItems="center" justifyContent="center">
               <Box />
               <Typography variant="h5">Enemies</Typography>
-              <SelectMonster onSelectMonster={onAddMonster} />
+              <SelectMonster onSelectMonster={onAddMonsters} />
             </Stack>
             {remainingMonsters.length > 0 && (
               <Typography variant="subtitle1" mt={-1}>

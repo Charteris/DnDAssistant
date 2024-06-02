@@ -154,7 +154,7 @@ export default function MonsterTable() {
   ];
 
   return (
-    <Container>
+    <Container maxWidth="xl">
       <TextField
         variant="filled"
         fullWidth

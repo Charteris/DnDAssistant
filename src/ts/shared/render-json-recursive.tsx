@@ -10,6 +10,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { ArrowDropDown } from '@mui/icons-material';
 import { CustomAccordion } from '../shared/custom-styles';
 
+// TODO: Render skeleton while subcomponent loads
 type InstanceType = object | string | object[] | string[];
 
 const RenderTable: FC<{ [key: string]: string[] }> = (tableObject) => {

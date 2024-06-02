@@ -17,7 +17,7 @@ import {
   MONSTER_TYPES,
   SIZES,
 } from '../constants';
-import useGenerateEncounter from './useGenerateEncounter';
+import useGenerateEncounter from './use-generate-encounter';
 import EncounterTracker from './encounter-tracker';
 
 export default function EncounterGenerator() {
@@ -40,7 +40,7 @@ export default function EncounterGenerator() {
   } = useGenerateEncounter();
 
   return (
-    <Container>
+    <Container maxWidth="xl">
       <Paper sx={{ m: 3, p: 2 }}>
         <Stack
           spacing={2}

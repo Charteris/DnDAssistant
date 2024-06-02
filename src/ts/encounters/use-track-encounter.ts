@@ -75,11 +75,11 @@ const useTrackEncounter = (monstersInCombat: Monster[]) => {
     ]
   );
 
-  const onAddMonster = useCallback(
-    (monster: Monster) => {
+  const onAddMonsters = useCallback(
+    (monsters: Monster[]) => {
       const newRemainingMonsters = [
         ...remainingMonsters,
-        createRemainingMonster(monster),
+        ...monsters.map(createRemainingMonster),
       ];
       setRemainingMonsters(newRemainingMonsters);
       setSelectedMonster(newRemainingMonsters[0]);
@@ -94,7 +94,7 @@ const useTrackEncounter = (monstersInCombat: Monster[]) => {
   return {
     remainingMonsters,
     identifiedMonster,
-    onAddMonster,
+    onAddMonsters,
     onDeleteMonster,
     setSelectedMonster,
     onUpdateHealth,
