@@ -23,6 +23,7 @@ export default function SpellTable() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedSpell, setSelectedSpell] = useState<Spell | null>(null);
   const [spellIndex, setSpellIndex] = useState<number>(0);
+
   const filteredSpells = spells.filter((spell) =>
     searchQuery
       .split('+')
@@ -33,10 +34,10 @@ export default function SpellTable() {
     (params: GridRowParams) => {
       setSelectedSpell(params.row);
       setSpellIndex(
-        spells.findIndex((spell) => spell.name === params.row.name)
+        filteredSpells.findIndex((spell) => spell.name === params.row.name)
       );
     },
-    [selectedSpell, setSelectedSpell, setSpellIndex]
+    [selectedSpell, filteredSpells, setSelectedSpell, setSpellIndex]
   );
 
   const onViewNextSpell = useCallback(
@@ -93,7 +94,7 @@ export default function SpellTable() {
             {selectedSpell !== null && <SpellCard spell={selectedSpell} />}
             <PageIterator
               page={spellIndex}
-              maxLength={spells.length}
+              maxLength={filteredSpells.length}
               pageSetter={onViewNextSpell}
             />
           </Container>
