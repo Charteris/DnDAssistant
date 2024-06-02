@@ -1,7 +1,6 @@
 import React from 'react';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 import MonsterTable from './monsters/monster-table';
-import Header from './header';
 import MonsterView from './monsters/monster-view';
 import EncounterGenerate from './encounters/encounter-generator';
 import Mechanics from './mechanics/mechanics';
@@ -9,6 +8,7 @@ import SpellTable from './spells/spell-table';
 import SpellView from './spells/spell-view';
 import Shop from './shop/shop';
 import CampaignManager from './campaigns/campaign-manager';
+import Header from './Header';
 
 const AppRouter = () => {
   const router = createHashRouter([
