@@ -34,6 +34,7 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
     pageNumber,
     setPageNumber,
   } = useTrackEncounter(monstersInCombat);
+
   const pageOffset = pageNumber * PAGE_SIZE;
 
   return (
@@ -65,8 +66,8 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
               </Typography>
             )}
             {remainingMonsters
+              .sort((a, b) => (a.initiative < b.initiative ? 1 : -1))
               .slice(pageOffset, pageOffset + PAGE_SIZE)
-              .sort((a, b) => (a.initiative > b.initiative ? 1 : -1))
               .map((monster) => (
                 <Paper variant="outlined" sx={{ p: 1 }}>
                   <Stack

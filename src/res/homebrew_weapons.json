@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Club",
+    "cost": "1 sp",
+    "damage": "1d4 bludgeoning",
+    "weight": "2 lb",
+    "properties": "Light",
+    "type": "Simple melee"
+  }
+]

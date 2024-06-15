@@ -99,7 +99,7 @@ const weaponColumnDescriptor = [
   {
     field: 'properties',
     headerName: 'Properties',
-    flex: 1,
+    flex: 3,
     sortable: true,
     filterable: true,
   },
