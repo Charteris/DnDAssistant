@@ -25,6 +25,7 @@ const MonsterTable: FC<{
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedMonster, setSelectedMonster] = useState<Monster | null>(null);
   const [monsterIndex, setMonsterIndex] = useState<number>(0);
+
   const filteredMonsters = monsters.filter((monster) =>
     searchQuery
       .split('+')
@@ -35,10 +36,10 @@ const MonsterTable: FC<{
     (params: GridRowParams) => {
       setSelectedMonster(params.row);
       setMonsterIndex(
-        monsters.findIndex((monster) => monster.name === params.row.name)
+        filteredMonsters.findIndex((monster) => monster.name === params.row.name)
       );
     },
-    [selectedMonster, setSelectedMonster, setMonsterIndex]
+    [selectedMonster, filteredMonsters, setSelectedMonster, setMonsterIndex]
   );
 
   const onViewNextMonster = useCallback(
@@ -86,6 +87,11 @@ const MonsterTable: FC<{
             alignItems="center"
           >
             <Typography variant="h5">Monster View</Typography>
+            <PageIterator
+              page={monsterIndex}
+              maxLength={filteredMonsters.length}
+              pageSetter={onViewNextMonster}
+            />
             <IconButton onClick={() => setSelectedMonster(null)}>
               <Close />
             </IconButton>
@@ -96,11 +102,6 @@ const MonsterTable: FC<{
             {selectedMonster !== null && (
               <MonsterCard monster={selectedMonster} />
             )}
-            <PageIterator
-              page={monsterIndex}
-              maxLength={monsters.length}
-              pageSetter={onViewNextMonster}
-            />
           </Container>
         </DialogContent>
       </Dialog>
