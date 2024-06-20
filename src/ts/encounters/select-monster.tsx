@@ -29,7 +29,7 @@ const SelectMonster: FC<{
 
   const onRemoveMonster = useCallback(
     (index: number) => setMonstersToAdd(
-      monstersToAdd.filter((_monster, monsterIndex) => index !==monsterIndex)
+      monstersToAdd.filter((_monster, monsterIndex) => index !== monsterIndex)
     ),
     [monstersToAdd, setMonstersToAdd]
   );
@@ -57,10 +57,10 @@ const SelectMonster: FC<{
         <DialogTitle>Select Monsters</DialogTitle>
         <DialogContent>
           <Container maxWidth="xl">
-            <Stack 
-              spacing={1} 
-              direction="row" 
-              justifyContent="space-between" 
+            <Stack
+              spacing={1}
+              direction="row"
+              justifyContent="space-between"
               alignItems="top"
             >
               <Card sx={{ width: '40%' }}>
@@ -90,10 +90,10 @@ const SelectMonster: FC<{
               />
             </Stack>
             <Stack direction="row" justifyContent="right">
-              <Button onClick={onSubmit} disabled={monstersToAdd.length === 0}>
+              <Button variant="outlined" onClick={onSubmit} disabled={monstersToAdd.length === 0}>
                 Add Monster(s)
               </Button>
-              <Button onClick={() => setOpen(false)}>Cancel</Button>
+              <Button variant="outlined" onClick={() => setOpen(false)}>Cancel</Button>
             </Stack>
           </Container>
         </DialogContent>

@@ -3,6 +3,7 @@ import {
   Autocomplete,
   Button,
   Container,
+  Divider,
   Paper,
   Slider,
   Stack,
@@ -20,6 +21,7 @@ import {
 import useGenerateEncounter from './use-generate-encounter';
 import EncounterTracker from './encounter-tracker';
 
+// TODO: Provide support for loading and saving encounters for quick-retrieval
 export default function EncounterGenerator() {
   const {
     searchQuery,
@@ -41,13 +43,16 @@ export default function EncounterGenerator() {
 
   return (
     <Container maxWidth="xl">
-      <Paper sx={{ m: 3, p: 2 }}>
+      <Typography variant="h4">Encounter</Typography>
+      <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
+      <Paper sx={{ p: 2, m: 1 }}>
         <Stack
-          spacing={2}
+          spacing={1}
           direction="column"
           justifyContent="space-between"
           alignItems="center"
         >
+          <Typography variant="h4">Generate Encounter</Typography>
           <TextField
             variant="filled"
             fullWidth
@@ -162,7 +167,7 @@ export default function EncounterGenerator() {
               }
             />
           </Stack>
-          <Button variant="contained" onClick={determineMonstersInEncounter}>
+          <Button variant="outlined" onClick={determineMonstersInEncounter}>
             Generate Encounter
           </Button>
         </Stack>

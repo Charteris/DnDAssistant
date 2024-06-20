@@ -10,6 +10,7 @@ export type Page = {
 };
 
 const pages: Page[] = [
+  { label: 'guides', name: 'Player Guides', path: '/' },
   {
     label: 'resources',
     name: 'Resources',

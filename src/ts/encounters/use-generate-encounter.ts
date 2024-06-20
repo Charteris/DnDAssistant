@@ -1,5 +1,5 @@
 import React from 'react';
-import monsters from '../../res/srd_5e_monsters.json';
+import monsters from '../../res/resources/srd_5e_monsters.json';
 import {
   DIFFICULTIES,
   ENCOUNTER_MULTIPLIERS,
@@ -59,23 +59,21 @@ export default function useGenerateEncounter() {
       experience[0] <= monsterExperience && monsterExperience <= experience[1]
     );
   };
-  const filterMonsters = () =>
-    monsters.filter(
+
+  const determineMonstersInEncounter = () => {
+    const maxExperienceThreshold =
+      EXPERIENCE_THRESHOLDS[playerLevel][
+      DIFFICULTIES.findIndex((diff) => diff === difficulty)
+      ] * partySize;
+
+    let potentialMonsters = monsters.filter(
       (monster) =>
         filterMonsterByExperience(monster) &&
         filterMonsterByType(monster) &&
         filterMonsterByAlignment(monster) &&
         filterMonsterBySize(monster) &&
-        filterByKeywordSearch(monster)
-    );
-
-  const determineMonstersInEncounter = () => {
-    const maxExperienceThreshold =
-      EXPERIENCE_THRESHOLDS[playerLevel - 1][
-        DIFFICULTIES.findIndex((diff) => diff === difficulty)
-      ] * partySize;
-    let potentialMonsters = filterMonsters().filter(
-      (monster) => getMonsterXP(monster) <= maxExperienceThreshold
+        filterByKeywordSearch(monster) &&
+        getMonsterXP(monster) <= maxExperienceThreshold
     );
     let experienceThreshold = maxExperienceThreshold;
     let multiplier = 1;
@@ -92,7 +90,7 @@ export default function useGenerateEncounter() {
         ENCOUNTER_MULTIPLIERS.find(
           (encounterMultiplier) =>
             monstersInCombat.length + 1 <=
-              encounterMultiplier.numberOfMonsters ||
+            encounterMultiplier.numberOfMonsters ||
             encounterMultiplier.numberOfMonsters === 15
         )?.multiplier ?? 1;
       const usedXPBudget = monstersInCombat.reduce(
