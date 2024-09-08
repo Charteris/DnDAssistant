@@ -26,6 +26,7 @@
     "@progress/kendo-licensing": "^1.3.5",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "dnd-assistant": "file:",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "latest",
