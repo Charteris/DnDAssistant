@@ -27,7 +27,7 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
   const {
     remainingMonsters,
     identifiedMonster,
-    onAddMonster,
+    onAddMonsters,
     onDeleteMonster,
     setSelectedMonster,
     onUpdateHealth,
@@ -58,7 +58,7 @@ const EncounterTracker: FC<{ monstersInCombat: Monster[] }> = ({
             <Stack direction="row" alignItems="center" justifyContent="center">
               <Box />
               <Typography variant="h5">Enemies</Typography>
-              <SelectMonster onSelectMonster={onAddMonster} />
+              <SelectMonster onSelectMonster={onAddMonsters} />
             </Stack>
             {remainingMonsters.length > 0 && (
               <Typography variant="subtitle1" mt={-1}>

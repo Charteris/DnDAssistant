@@ -25,6 +25,7 @@ const MonsterTable: FC<{
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedMonster, setSelectedMonster] = useState<Monster | null>(null);
   const [monsterIndex, setMonsterIndex] = useState<number>(0);
+
   const filteredMonsters = monsters.filter((monster) =>
     searchQuery
       .split('+')
