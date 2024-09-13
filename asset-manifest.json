@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.js": "/DnDAssistant/static/js/main.4cbc852d.js",
-    "static/js/318.7bfa106d.chunk.js": "/DnDAssistant/static/js/318.7bfa106d.chunk.js",
+    "main.js": "/DnDAssistant/static/js/main.bb48319a.js",
+    "static/js/318.096ee082.chunk.js": "/DnDAssistant/static/js/318.096ee082.chunk.js",
     "static/media/Avandria.png": "/DnDAssistant/static/media/Avandria.aba68b144e09ff63f465.png",
     "static/media/dragonbane_citadel.png": "/DnDAssistant/static/media/dragonbane_citadel.ca39348650a3c5ea8f65.png",
+    "static/media/greenlight.png": "/DnDAssistant/static/media/greenlight.3b97f3542981cfe90ab2.png",
     "static/media/stormfall_grove.png": "/DnDAssistant/static/media/stormfall_grove.ee4556aa6da26bbc3c53.png",
     "static/media/oakstead.png": "/DnDAssistant/static/media/oakstead.26952b60d56d27e8cfad.png",
+    "static/media/fenfire.png": "/DnDAssistant/static/media/fenfire.7bda0a53c89a363663d7.png",
+    "static/media/mooncrest.png": "/DnDAssistant/static/media/mooncrest.1b5cf98164728c744df2.png",
     "static/media/bridgewater.png": "/DnDAssistant/static/media/bridgewater.b70ff67b6ff7a7aab68e.png",
     "static/media/sable_creek.png": "/DnDAssistant/static/media/sable_creek.bca8f4c52f10b383fc9f.png",
     "index.html": "/DnDAssistant/index.html",
-    "main.4cbc852d.js.map": "/DnDAssistant/static/js/main.4cbc852d.js.map",
-    "318.7bfa106d.chunk.js.map": "/DnDAssistant/static/js/318.7bfa106d.chunk.js.map"
+    "main.bb48319a.js.map": "/DnDAssistant/static/js/main.bb48319a.js.map",
+    "318.096ee082.chunk.js.map": "/DnDAssistant/static/js/318.096ee082.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4cbc852d.js"
+    "static/js/main.bb48319a.js"
   ]
 }
