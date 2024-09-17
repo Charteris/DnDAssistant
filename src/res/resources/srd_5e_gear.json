@@ -1,0 +1,596 @@
+[
+  {
+    "name": "Abacus",
+    "cost": "2 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Acid (vial)",
+    "cost": "25 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Alchemist’s fire (flask)",
+    "cost": "50 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Arrows (20)",
+    "cost": "1 gp",
+    "weight": "1 lb.",
+    "type": "Ammunition"
+  },
+  {
+    "name": "Blowgun needles (50)",
+    "cost": "1 gp",
+    "weight": "1 lb.",
+    "type": "Ammunition"
+  },
+  {
+    "name": "Crossbow bolts (20)",
+    "cost": "1 gp",
+    "weight": "1½ lb.",
+    "type": "Ammunition"
+  },
+  {
+    "name": "Sling bullets (20)",
+    "cost": "4 cp",
+    "weight": "1½ lb.",
+    "type": "Ammunition"
+  },
+  {
+    "name": "Antitoxin (vial)",
+    "cost": "50 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Crystal",
+    "cost": "10 gp",
+    "weight": "1 lb.",
+    "type": "Arcane focus"
+  },
+  {
+    "name": "Orb",
+    "cost": "20 gp",
+    "weight": "3 lb.",
+    "type": "Arcane focus"
+  },
+  {
+    "name": "Rod",
+    "cost": "10 gp",
+    "weight": "2 lb.",
+    "type": "Arcane focus"
+  },
+  {
+    "name": "Staff",
+    "cost": "5 gp",
+    "weight": "4 lb.",
+    "type": "Arcane focus"
+  },
+  {
+    "name": "Wand",
+    "cost": "10 gp",
+    "weight": "1 lb.",
+    "type": "Arcane focus"
+  },
+  {
+    "name": "Backpack",
+    "cost": "2 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Ball bearings (bag of 1,000)",
+    "cost": "1 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Barrel",
+    "cost": "2 gp",
+    "weight": "70 lb.",
+    "type": ""
+  },
+  {
+    "name": "Basket",
+    "cost": "4 sp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Bedroll",
+    "cost": "1 gp",
+    "weight": "7 lb.",
+    "type": ""
+  },
+  {
+    "name": "Bell",
+    "cost": "1 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Blanket",
+    "cost": "5 sp",
+    "weight": "3 lb.",
+    "type": ""
+  },
+  {
+    "name": "Block and tackle",
+    "cost": "1 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Book",
+    "cost": "25 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Bottle, glass",
+    "cost": "2 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Bucket",
+    "cost": "5 cp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Caltrops (bag of 20)",
+    "cost": "1 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Candle",
+    "cost": "1 cp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Case, crossbow bolt",
+    "cost": "1 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Case, map or scroll",
+    "cost": "1 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Chain (10 feet)",
+    "cost": "5 gp",
+    "weight": "10 lb.",
+    "type": ""
+  },
+  {
+    "name": "Chalk (1 piece)",
+    "cost": "1 cp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Chest",
+    "cost": "5 gp",
+    "weight": "25 lb.",
+    "type": ""
+  },
+  {
+    "name": "Climber’s kit",
+    "cost": "25 gp",
+    "weight": "12 lb.",
+    "type": ""
+  },
+  {
+    "name": "Clothes, common",
+    "cost": "5 sp",
+    "weight": "3 lb.",
+    "type": ""
+  },
+  {
+    "name": "Clothes, costume",
+    "cost": "5 gp",
+    "weight": "4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Clothes, fine",
+    "cost": "15 gp",
+    "weight": "6 lb.",
+    "type": ""
+  },
+  {
+    "name": "Clothes, traveler’s",
+    "cost": "2 gp",
+    "weight": "4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Component pouch",
+    "cost": "25 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Crowbar",
+    "cost": "2 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Sprig of mistletoe",
+    "cost": "1 gp",
+    "weight": "—",
+    "type": "Druidic focus"
+  },
+  {
+    "name": "Totem",
+    "cost": "1 gp",
+    "weight": "—",
+    "type": "Druidic focus"
+  },
+  {
+    "name": "Wooden staff",
+    "cost": "5 gp",
+    "weight": "4 lb.",
+    "type": "Druidic focus"
+  },
+  {
+    "name": "Yew wand",
+    "cost": "10 gp",
+    "weight": "1 lb.",
+    "type": "Druidic focus"
+  },
+  {
+    "name": "Fishing tackle",
+    "cost": "1 gp",
+    "weight": "4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Flask or tankard",
+    "cost": "2 cp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Grappling hook",
+    "cost": "2 gp",
+    "weight": "4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Hammer",
+    "cost": "1 gp",
+    "weight": "3 lb.",
+    "type": ""
+  },
+  {
+    "name": "Hammer, sledge",
+    "cost": "2 gp",
+    "weight": "10 lb.",
+    "type": ""
+  },
+  {
+    "name": "Healer’s kit",
+    "cost": "5 gp",
+    "weight": "3 lb.",
+    "type": ""
+  },
+  {
+    "name": "Amulet",
+    "cost": "5 gp",
+    "weight": "1 lb.",
+    "type": "Holy symbol"
+  },
+  {
+    "name": "Emblem",
+    "cost": "5 gp",
+    "weight": "—",
+    "type": "Holy symbol"
+  },
+  {
+    "name": "Reliquary",
+    "cost": "5 gp",
+    "weight": "2 lb.",
+    "type": "Holy symbol"
+  },
+  {
+    "name": "Holy water (flask)",
+    "cost": "25 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Hourglass",
+    "cost": "25 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Hunting trap",
+    "cost": "5 gp",
+    "weight": "25 lb.",
+    "type": ""
+  },
+  {
+    "name": "Ink (1 ounce bottle)",
+    "cost": "10 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Ink pen",
+    "cost": "2 cp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Jug or pitcher",
+    "cost": "2 cp",
+    "weight": "4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Ladder (10-foot)",
+    "cost": "1 sp",
+    "weight": "25 lb.",
+    "type": ""
+  },
+  {
+    "name": "Lamp",
+    "cost": "5 sp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Lantern, bullseye",
+    "cost": "10 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Lantern, hooded",
+    "cost": "5 gp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Lock",
+    "cost": "10 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Magnifying glass",
+    "cost": "100 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Manacles",
+    "cost": "2 gp",
+    "weight": "6 lb.",
+    "type": ""
+  },
+  {
+    "name": "Mess kit",
+    "cost": "2 sp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Mirror, steel",
+    "cost": "5 gp",
+    "weight": "1/2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Oil (flask)",
+    "cost": "1 sp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Paper (one sheet)",
+    "cost": "2 sp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Parchment (one sheet)",
+    "cost": "1 sp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Perfume (vial)",
+    "cost": "5 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Pick, miner’s",
+    "cost": "2 gp",
+    "weight": "10 lb.",
+    "type": ""
+  },
+  {
+    "name": "Piton",
+    "cost": "5 cp",
+    "weight": "1/4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Poison, basic (vial)",
+    "cost": "100 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Pole (10-foot)",
+    "cost": "5 cp",
+    "weight": "7 lb.",
+    "type": ""
+  },
+  {
+    "name": "Pot, iron",
+    "cost": "2 gp",
+    "weight": "10 lb.",
+    "type": ""
+  },
+  {
+    "name": "Potion of healing 5",
+    "cost": "0 gp",
+    "weight": "1/2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Pouch",
+    "cost": "5 sp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Quiver",
+    "cost": "1 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Ram, portable",
+    "cost": "4 gp",
+    "weight": "35 lb.",
+    "type": ""
+  },
+  {
+    "name": "Rations (1 day)",
+    "cost": "5 sp",
+    "weight": "2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Robes",
+    "cost": "1 gp",
+    "weight": "4 lb.",
+    "type": ""
+  },
+  {
+    "name": "Rope, hempen (50 feet)",
+    "cost": "1 gp",
+    "weight": "10 lb.",
+    "type": ""
+  },
+  {
+    "name": "Rope, silk (50 feet)",
+    "cost": "10 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Sack",
+    "cost": "1 cp",
+    "weight": "1/2 lb.",
+    "type": ""
+  },
+  {
+    "name": "Scale, merchant’s",
+    "cost": "5 gp",
+    "weight": "3 lb.",
+    "type": ""
+  },
+  {
+    "name": "Sealing wax",
+    "cost": "5 sp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Shovel",
+    "cost": "2 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Signal whistle",
+    "cost": "5 cp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Signet ring",
+    "cost": "5 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Soap",
+    "cost": "2 cp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Spellbook",
+    "cost": "50 gp",
+    "weight": "3 lb.",
+    "type": ""
+  },
+  {
+    "name": "Spikes, iron (10)",
+    "cost": "1 gp",
+    "weight": "5 lb.",
+    "type": ""
+  },
+  {
+    "name": "Spyglass",
+    "cost": "1,000 gp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Tent, two-person",
+    "cost": "2 gp",
+    "weight": "20 lb.",
+    "type": ""
+  },
+  {
+    "name": "Tinderbox",
+    "cost": "5 sp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Torch",
+    "cost": "1 cp",
+    "weight": "1 lb.",
+    "type": ""
+  },
+  {
+    "name": "Vial",
+    "cost": "1 gp",
+    "weight": "—",
+    "type": ""
+  },
+  {
+    "name": "Waterskin",
+    "cost": "2 sp",
+    "weight": "5 lb. (full)",
+    "type": ""
+  },
+  {
+    "name": "Whetstone",
+    "cost": "1 cp",
+    "weight": "1 lb.",
+    "type": ""
+  }
+]

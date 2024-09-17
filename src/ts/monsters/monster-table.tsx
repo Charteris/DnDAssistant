@@ -4,13 +4,14 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  Divider,
   IconButton,
   Paper,
   Stack,
   TextField,
   Typography,
 } from '@mui/material';
-import monsters from '../../res/srd_5e_monsters.json';
+import monsters from '../../res/resources/srd_5e_monsters.json';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import { Monster } from '../types/Monster';
 import PageIterator from '../shared/page-iterator';
@@ -55,6 +56,8 @@ const MonsterTable: FC<{
 
   return (
     <Container maxWidth="xl">
+      <Typography variant="h4">Monsters</Typography>
+      <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       <TextField
         variant="filled"
         fullWidth

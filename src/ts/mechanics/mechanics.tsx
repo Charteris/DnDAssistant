@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Box, Paper, Skeleton, Stack, Typography } from '@mui/material';
+import { Box, Divider, Paper, Skeleton, Stack, Typography } from '@mui/material';
 import mechanics from '../../res/rules/06 mechanics.json';
 import combat from '../../res/rules/07 combat.json';
 import races from '../../res/rules/01 races.json';
@@ -24,8 +24,9 @@ export default function Mechanics() {
   ];
 
   return (
-    <Stack direction="column" margin="3%">
-      <Typography variant="h4">User Guides</Typography>
+    <Stack direction="column" m="3%">
+      <Typography variant="h4">Players Guides</Typography>
+      <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       {userGuides.map(({ title, guides }) => (
         <Box>
           <Typography variant="h5">{title}</Typography>

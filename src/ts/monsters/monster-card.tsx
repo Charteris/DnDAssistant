@@ -24,7 +24,7 @@ const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
   ];
 
   return (
-    <Card sx={{ margin: 2 }}>
+    <Card sx={{ m: 2 }}>
       <CardContent>
         <Stack direction="column">
           <Typography variant="h4">{monster.name}</Typography>

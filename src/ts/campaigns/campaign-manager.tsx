@@ -1,6 +1,7 @@
 import {
   Box,
   Container,
+  Divider,
   Paper,
   Skeleton,
   Stack,
@@ -25,6 +26,8 @@ const CampaignManager: FC = () => {
 
   return (
     <Container maxWidth="xl">
+      <Typography variant="h4">Campaign</Typography>
+      <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       <Stack spacing={1} direction="column" textAlign="center">
         <Paper sx={{ p: 1, m: 2 }}>
           <Typography variant="h4">Tales of Avandria</Typography>

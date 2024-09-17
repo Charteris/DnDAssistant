@@ -42,6 +42,30 @@
       "type": "City",
       "image": "stormfall_grove.png",
       "description": "Stormfall Grove is home to the Ravenarch Guild which are notorious for their prowess in relic hunting whilst also being known as a group of ferocious killers. The city was once a small town full of refugees but was renamed after the fall of Greytooth due to the intense storms incurred by the dense ash clouds nearby."
+    },
+    {
+      "x": 9530,
+      "y": 3170,
+      "title": "Greenlight",
+      "type": "Garrison",
+      "image": "greenlight.png",
+      "description": "Greenlight is the primary garrison for the grand inquistors, providing ancient relics and forging grand weapons and armour for them. As such, it is heavily fortified and is even rumoured to have one of the chromatic Ancient dragons imprisoned in its depths, ready to be used as a tool of war."
+    },
+    {
+      "x": 10350,
+      "y": 4400,
+      "title": "Fenfire",
+      "type": "Training Camp",
+      "image": "fenfire.png",
+      "description": "Fenfire is an ancient castle which stretches the height of the mountain tops. The land around it is forever scorched by the various draconic elements due to the strict training regimes performed there. Not only is it the primary training camp for soldiers and mages, but it is also the birthplace of wyrmlings to breed dragon riders."
+    },
+    {
+      "x": 8830,
+      "y": 1660,
+      "title": "Mooncrest",
+      "type": "Village",
+      "image": "mooncrest.png",
+      "description": "Mooncrest is a feared village on the outskirts of Avandria - not due to its social stature or an overwhelming militant presence, but due to the fact that no one who ventures to Mooncrest return."
     }
   ]
 }

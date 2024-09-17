@@ -4,13 +4,14 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  Divider,
   IconButton,
   Paper,
   Stack,
   TextField,
   Typography,
 } from '@mui/material';
-import spells from '../../res/srd_5e_spells.json';
+import spells from '../../res/resources/srd_5e_spells.json';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import { Spell } from '../types/Spell';
 import { useState } from 'react';
@@ -50,6 +51,8 @@ export default function SpellTable() {
 
   return (
     <Container maxWidth="xl">
+      <Typography variant="h4">Spells</Typography>
+      <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       <TextField
         variant="filled"
         fullWidth
@@ -84,6 +87,11 @@ export default function SpellTable() {
             alignItems="center"
           >
             <Typography variant="h5">Spell View</Typography>
+            <PageIterator
+              page={spellIndex}
+              maxLength={filteredSpells.length}
+              pageSetter={onViewNextSpell}
+            />
             <IconButton onClick={() => setSelectedSpell(null)}>
               <Close />
             </IconButton>
@@ -92,11 +100,6 @@ export default function SpellTable() {
         <DialogContent>
           <Container sx={{ justifyContent: 'center', alignContent: 'center' }}>
             {selectedSpell !== null && <SpellCard spell={selectedSpell} />}
-            <PageIterator
-              page={spellIndex}
-              maxLength={filteredSpells.length}
-              pageSetter={onViewNextSpell}
-            />
           </Container>
         </DialogContent>
       </Dialog>

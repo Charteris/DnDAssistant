@@ -11,7 +11,7 @@ import { Spell } from '../types/Spell';
 
 const SpellCard: FC<{ spell: Spell }> = ({ spell }) => {
   return (
-    <Card>
+    <Card sx={{ m: 2 }}>
       <CardContent>
         <Stack direction="column">
           <Typography variant="h4">{spell.name}</Typography>

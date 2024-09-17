@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Maelstrom Dagger",
+    "cost": "100 gp",
+    "damage": "1d4 piercing",
+    "weight": "1 lb.",
+    "properties": "Finesse, light, thrown (range 20/60)",
+    "type": "Wondrous melee",
+    "description": "When thrown, this dagger arcs in a 15-foot diameter circle back into the wielders hand. During this arc, the dagger transforms into an illusory cloud of daggers within a 5-foot cube and deals 4d4 force damage to any creatures within the clouds arc."
+  },
+  {
+    "name": "Sword of the Voidcaller",
+    "cost": "inf",
+    "damage": "2d6 force",
+    "weight": "6 lb.",
+    "properties": "Heavy, two-handed",
+    "type": "Wondrous melee",
+    "description": "This weapon is bound to the \"voidcaller\" and cannot be transferred or sold. If a transfer is attempted, the sword evaporates into shadow once the voidcaller releases the blade and re-manifests in their hand after. \nThis weapon along with the associated armour can absorb elemental essence which has been bound to any non-ephemeral plane, transforming the blade into one which abides by this element and dealing elemental damage accordingly. At any time, the voidcaller can nullify this effect, reverting the blade to its standard ephemeral form to deal force damage."
+  }
+]
