@@ -19,6 +19,7 @@ import PageIterator from '../shared/page-iterator';
 import SpellCard from '../spells/spell-card';
 import { Close } from '@mui/icons-material';
 import { spellColumnDescriptor } from './spell-column-descriptor';
+import CreateSpell from './create-spell';
 
 export default function SpellTable() {
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -29,7 +30,7 @@ export default function SpellTable() {
     searchQuery
       .split('+')
       .some((query) => spell.name.toLowerCase().includes(query.toLowerCase()))
-  );
+  ).map((spell) => spell as Spell);
 
   const onViewSpell = useCallback(
     (params: GridRowParams) => {
@@ -51,7 +52,10 @@ export default function SpellTable() {
 
   return (
     <Container maxWidth="xl">
-      <Typography variant="h4">Spells</Typography>
+      <Stack direction="row" justifyContent="space-between">
+        <Typography variant="h4">Spells</Typography>
+        <CreateSpell />
+      </Stack>
       <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       <TextField
         variant="filled"

@@ -16,10 +16,10 @@ import weapons from '../../res/resources/srd_5e_weapons.json';
 import custom_weapons from '../../res/resources/custom_weapons.json';
 import gears from '../../res/resources/srd_5e_gear.json';
 import custom_gears from '../../res/resources/custom_gear.json';
-import { armourColumnDescriptor, weaponColumnDescriptor, gearColumnDescriptor } from './gear_column_descriptors';
+import { armourColumnDescriptor, weaponColumnDescriptor, gearColumnDescriptor } from './gear-column-descriptors';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import CreateGear from './create_gear';
 import { Armour, Gear, Weapon } from '../types/Gear';
+import CreateGear from './create-gear';
 
 type GearType = Weapon | Armour | Gear;
 type SectionsType = { [id: string]: { rows: GearType[], columns: GridColDef[] } };

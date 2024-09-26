@@ -9,16 +9,15 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  Divider,
   IconButton,
   Stack,
   TextField,
   Typography
 } from "@mui/material";
 import { Add, Close } from '@mui/icons-material';
-import GearEditor from './gear_editor';
-import WeaponEditor from './weapon_editor';
-import ArmourEditor from './armour_editor';
+import GearEditor from './gear-editor';
+import WeaponEditor from './weapon-editor';
+import ArmourEditor from './armour-editor';
 
 enum GEAR_TYPE {
   ARMOUR = 'Armour',

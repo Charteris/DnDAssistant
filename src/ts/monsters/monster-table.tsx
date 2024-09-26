@@ -18,6 +18,7 @@ import PageIterator from '../shared/page-iterator';
 import MonsterCard from './monster-card';
 import { Close } from '@mui/icons-material';
 import { monsterColumnDescriptor } from './monster-column-descriptor';
+import CreateMonster from './create-monster';
 
 const MonsterTable: FC<{
   onRowClick?: (params: GridRowParams) => void;
@@ -31,7 +32,7 @@ const MonsterTable: FC<{
     searchQuery
       .split('+')
       .some((query) => monster.name.toLowerCase().includes(query.toLowerCase()))
-  );
+  ).map((monster) => monster as Monster);
 
   const onViewMonster = useCallback(
     (params: GridRowParams) => {
@@ -56,7 +57,10 @@ const MonsterTable: FC<{
 
   return (
     <Container maxWidth="xl">
-      <Typography variant="h4">Monsters</Typography>
+      <Stack direction="row" justifyContent="space-between">
+        <Typography variant="h4">Monsters</Typography>
+        <CreateMonster />
+      </Stack>
       <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       <TextField
         variant="filled"

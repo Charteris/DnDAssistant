@@ -89,7 +89,7 @@ const useTrackEncounter = (monstersInCombat: Monster[]) => {
 
   const identifiedMonster = monsters.find(
     (monster) => selectedMonster?.name === monster.name
-  );
+  ) as Monster;
 
   return {
     remainingMonsters,

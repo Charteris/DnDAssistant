@@ -30,6 +30,6 @@ export const defaultArmour = {
   strength: "",
   stealth: "",
   weight: "1 lb.",
-  type: "",
+  type: "Light",
   description: ""
 };

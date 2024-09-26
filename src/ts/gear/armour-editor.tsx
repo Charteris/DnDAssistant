@@ -1,6 +1,13 @@
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { defaultArmour } from '../types/Gear';
-import { Stack, TextField } from '@mui/material';
+import { Autocomplete, Stack, TextField } from '@mui/material';
+
+enum ARMOUR_TYPE {
+  LIGHT = 'Light',
+  MEDIUM = 'Medium',
+  HEAVY = 'Heavy',
+  SHIELD = 'Shield'
+}
 
 const ArmourEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpdateGear }) => {
   const [newArmour, setNewArmour] = useState(defaultArmour);
@@ -14,6 +21,16 @@ const ArmourEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpd
 
   useEffect(onUpdateGearFormatted, [onUpdateGearFormatted]);
 
+  const computeAC = (ac: string, type: string): string => {
+    switch (type) {
+      case ARMOUR_TYPE.LIGHT: return `${parseFloat(ac)} + Dex modifier`;
+      case ARMOUR_TYPE.MEDIUM: return `${parseFloat(ac)} + Dex modifier (max 2)`;
+      case ARMOUR_TYPE.HEAVY: return `${parseFloat(ac)}`;
+      case ARMOUR_TYPE.SHIELD: return `+${parseFloat(ac)}`;
+      default: return ac
+    }
+  };
+
   return (
     <Stack spacing={2} direction="column" justifyContent="space-between" alignItems="center">
       <TextField
@@ -23,40 +40,32 @@ const ArmourEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpd
         onBlur={onUpdateGearFormatted}
         label="Name"
       />
-      <Stack spacing={1} direction="row" justifyContent="space-between" alignItems="center">
-        <Stack spacing={1} direction="column" justifyContent="space-between">
+      <Stack spacing={1} direction="column" justifyContent="space-between" alignItems="center">
+        <Stack spacing={1} direction="row" justifyContent="space-between" alignItems="center">
           <TextField
             fullWidth
-            value={newArmour.AC}
-            onChange={(event) => setNewArmour({ ...newArmour, AC: event.target.value })}
+            value={parseFloat(newArmour.AC)}
+            onChange={(event) => setNewArmour({ ...newArmour, AC: computeAC(event.target.value, newArmour.type) })}
             onBlur={onUpdateGearFormatted}
             label="AC"
           />
-          <TextField
+          <Autocomplete
             fullWidth
             value={newArmour.type}
-            onChange={(event) => setNewArmour({ ...newArmour, type: event.target.value })}
+            onChange={(_event, type) => type !== null && setNewArmour({ ...newArmour, type, AC: computeAC(newArmour.AC, type) })}
             onBlur={onUpdateGearFormatted}
-            label="Type"
+            options={Object.values(ARMOUR_TYPE)}
+            renderInput={(params) => (<TextField {...params} label="Armour Type" />)}
           />
-        </Stack>
-        <Stack spacing={1} direction="column" justifyContent="space-between">
           <TextField
             fullWidth
             value={newArmour.strength}
             onChange={(event) => setNewArmour({ ...newArmour, strength: event.target.value })}
             onBlur={onUpdateGearFormatted}
-            label="Strength"
-          />
-          <TextField
-            fullWidth
-            value={newArmour.stealth}
-            onChange={(event) => setNewArmour({ ...newArmour, stealth: event.target.value })}
-            onBlur={onUpdateGearFormatted}
-            label="Stealth"
+            label="Strength Req."
           />
         </Stack>
-        <Stack spacing={1} direction="column" justifyContent="space-between">
+        <Stack spacing={1} direction="row" justifyContent="space-between" alignItems="center">
           <TextField
             fullWidth
             value={newArmour.cost}

@@ -67,13 +67,15 @@ export default function useGenerateEncounter() {
       ] * partySize;
 
     let potentialMonsters = monsters.filter(
-      (monster) =>
-        filterMonsterByExperience(monster) &&
-        filterMonsterByType(monster) &&
-        filterMonsterByAlignment(monster) &&
-        filterMonsterBySize(monster) &&
-        filterByKeywordSearch(monster) &&
-        getMonsterXP(monster) <= maxExperienceThreshold
+      (rawMonster) => {
+        const monster = rawMonster as Monster;
+        return filterMonsterByExperience(monster) &&
+          filterMonsterByType(monster) &&
+          filterMonsterByAlignment(monster) &&
+          filterMonsterBySize(monster) &&
+          filterByKeywordSearch(monster) &&
+          getMonsterXP(monster) <= maxExperienceThreshold
+      }
     );
     let experienceThreshold = maxExperienceThreshold;
     let multiplier = 1;
@@ -82,7 +84,7 @@ export default function useGenerateEncounter() {
     const monstersInCombat: Monster[] = [];
     while (experienceThreshold > 0 && potentialMonsters.length > 0) {
       const monsterIndex = Math.floor(Math.random() * potentialMonsters.length);
-      const monster = potentialMonsters[monsterIndex];
+      const monster = potentialMonsters[monsterIndex] as Monster;
       monstersInCombat.push(monster);
 
       // Adjust experience threshold accounting for monster groups
@@ -99,7 +101,7 @@ export default function useGenerateEncounter() {
       );
       experienceThreshold = maxExperienceThreshold - usedXPBudget * multiplier;
       potentialMonsters = potentialMonsters.filter(
-        (monster) => getMonsterXP(monster) <= experienceThreshold / multiplier
+        (monster) => getMonsterXP(monster as Monster) <= experienceThreshold / multiplier
       );
     }
     setMonstersInCombat(monstersInCombat);
