@@ -13448,5 +13448,610 @@
             "level4"
         ],
         "type": "4th-level conjuration"
+    },
+    {
+        "casting_time": "1 action",
+        "classes": [
+			"Sorcerer",
+			"Wizard",
+            "Artificer",
+            "The Fathomless (TCOE)"
+        ],
+        "components": {
+            "material": true,
+			"materials_needed": [
+				"an eggshell and a glove"
+			],
+            "raw": "V, S, M (an eggshell and a glove)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You create a Large hand of shimmering magical energy in an unoccupied space that you can see within range. The hand lasts for the duration, and it moves at your command, mimicking the movements of your own hand. The hand is an object that has AC 20 and Hit Points equal to your Hit Point maximum. If it drops to 0 Hit Points, the spell ends. The hand doesn’t occupy its space. When you cast the spell and as a Bonus Action on your later turns, you can move the hand up to 60 feet and then cause one of the following effects: Clenched Fist. The hand strikes a target within 5 feet of it. Make a melee spell attack. On a hit, the target takes 5d8 Force damage. Forceful Hand. The hand attempts to push a Huge or smaller creature within 5 feet of it. The target must succeed on a Strength saving throw, or the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target, remaining within 5 feet of it. Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. The target must succeed on a Dexterity saving throw, or the target has the Grappled condition, with an escape DC equal to your spell save DC. While the hand grapples the target, you can take a Bonus Action to cause the hand to crush it, dealing Bludgeoning damage to the target equal to 4d6 plus your spellcasting ability modifier. Interposing Hand. The hand grants you Half Cover against attacks and other effects that originate from its space or that pass through it. In addition, its space counts as Difficult Terrain for your enemies. Using a Higher-Level Spell Slot. The damage of the Clenched Fist increases by 2d8 and the damage of the Grasping Hand increases by 2d6 for each spell slot level above 5.",
+        "duration": "Concentration, up to 1 Minute",
+        "level": "5",
+        "name": "Bigby's Hand",
+        "range": "120 ft",
+        "ritual": false,
+        "school": "Evocation",
+        "tags": [
+			"Damage",
+			"Control",
+			"Sorcerer",
+			"Wizard",
+            "Artificer",
+            "The Fathomless (TCOE)",
+            "level5"
+        ],
+        "type": "5th-level Evocation"
+    },
+    {
+        "casting_time": "1 action",
+        "classes": [
+			"Wizard",
+            "Artificer"
+        ],
+        "components": {
+            "material": true,
+			"materials_needed": [
+				"a crystal rod worth at least 5,000 gp, which the spell consumes"
+			],
+            "raw": "V, S, M (a crystal rod worth at least 5,000 gp, which the spell consumes)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "Holding the rod used in the casting of the spell, you touch a Large or smaller chair that is unoccupied. The rod disappears, and the chair is transformed into a spelljamming helm.",
+        "duration": "Instantaneous",
+        "level": "5",
+        "name": "Create Spelljamming Helm",
+        "range": "Touch",
+        "ritual": false,
+        "school": "Transmutation",
+        "tags": [
+			"Creation",
+            "Wizard",
+            "Artificer",
+            "level5"
+        ],
+        "type": "5th-level Transmutation"
+    },
+    {
+        "casting_time": "1 action",
+        "classes": [
+			"Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": false,
+            "raw": "V, S",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "Threads of dark power leap from your fingers to pierce up to five Small or Medium corpses you can see within range. Each corpse immediately stands up and becomes undead. You decide whether it is a zombie or a skeleton (the statistics for zombies and skeletons are in the Monster Manual), and it gains a bonus to its attack and damage rolls equal to your spellcasting ability modifier. You can use a bonus action to mentally command the creatures you make with this spell, issuing the same command to all of them. To receive the command, a creature must be within 60 feet of you. You decide what action the creatures will take and where they will move during their next turn, or you can issue a general command, such as to guard a chamber or passageway against your foes. If you issue no commands, the creatures do nothing except defend themselves against hostile creatures. Once given an order, the creatures continue to follow it until their task is complete. The creatures are under your control until the spell ends, after which they become inanimate once more. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, you animate up to two additional corpses for each slot level above 5th.",
+        "duration": "Concentration, up to 1 Hour",
+        "level": "5",
+        "name": "Danse Macabre",
+        "range": "60 feet",
+        "ritual": false,
+        "school": "Necromancy",
+        "tags": [
+			"Creation",
+            "Control",
+            "Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Necromancy"
+    },
+    {
+        "casting_time": "1 action",
+        "classes": [
+			"Cleric",
+            "Wizard"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+				"a sunburst pendant worth at least 100 gp"
+			],
+            "raw": "V, S, M (a sunburst pendant worth at least 100 gp)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "The light of dawn shines down on a location you specify within range. Until the spell ends, a 30-foot-radius, 40-foot-high cylinder of bright light glimmers there. This light is sunlight. When the cylinder appears, each creature in it must make a Constitution saving throw, taking 4d10 radiant damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw whenever it ends its turn in the cylinder. If you’re within 60 feet of the cylinder, you can move it up to 60 feet as a bonus action on your turn.",
+        "duration": "Concentration, up to 1 Minute",
+        "level": "5",
+        "name": "Dawn",
+        "range": "60 feet (30 feet)",
+        "ritual": false,
+        "school": "Evocation",
+        "tags": [
+			"Damage",
+            "Utility",
+            "Cleric",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Evocation"
+    },
+    {
+        "casting_time": "1 action",
+        "classes": [
+			"Sorcerer",
+            "Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": false,
+            "raw": "V, S",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "A tendril of inky darkness reaches out from you, touching a creature you can see within range to drain life from it. The target must make a Dexterity saving throw. On a successful save, the target takes 2d8 necrotic damage, and the spell ends. On a failed save, the target takes 4d8 necrotic damage, and until the spell ends, you can use your action on each of your turns to automatically deal 4d8 necrotic damage to the target. The spell ends if you use your action to do anything else, if the target is ever outside the spell’s range, or if the target has total cover from you. Whenever the spell deals damage to a target, you regain hit points equal to half the amount of necrotic damage the target takes. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+        "duration": "Concentration, up to 1 Minute",
+        "level": "5",
+        "name": "Enervation",
+        "range": "60 feet",
+        "ritual": false,
+        "school": "Necromancy",
+        "tags": [
+			"Healing",
+            "Damage",
+            "Sorcerer",
+            "Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Necromancy"
+    },
+    {
+        "casting_time": "1 Bonus Action",
+        "classes": [
+			"Sorcerer",
+            "Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": false,
+            "materials_needed": [],
+            "raw": "V",
+            "somatic": false,
+            "verbal": true
+        },
+        "description": "You teleport up to 60 feet to an unoccupied space you can see. On each of your turns before the spell ends, you can use a bonus action to teleport in this way again.",
+        "duration": "Concentration, up to 1 Minute",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Far Step",
+        "range": "Self",
+        "ritual": false,
+        "school": "Conjuration",
+        "tags": [
+			"Teleportation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Conjuration"
+    },
+    {
+        "casting_time": "1 Bonus Action",
+        "classes": [
+			"Cleric",
+            "Paladin"
+        ],
+        "components": {
+            "material": false,
+            "materials_needed": [],
+            "raw": "V, S",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra 2d8 radiant damage on a hit. If the weapon isn’t already a magic weapon, it becomes one for the duration. As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of the weapon must make a Constitution saving throw. On a failed save, a creature takes 4d8 radiant damage, and it is blinded for 1 minute. On a successful save, a creature takes half as much damage and isn’t blinded. At the end of each of its turns, a blinded creature can make a Constitution saving throw, ending the effect on itself on a success.",
+        "duration": "Concentration, up to 1 Hour",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Holy Weapon",
+        "range": "Touch",
+        "ritual": false,
+        "school": "Evocation",
+        "tags": [
+			"Damage",
+            "Debuff",
+            "Cleric",
+            "Paladin",
+            "level5"
+        ],
+        "type": "5th-level Evocation"
+    },
+    {
+        "casting_time": "1 Minute",
+        "classes": [
+			"Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a ruby worth at least 999 gp"
+            ],
+            "raw": "V, S, M (a ruby worth at least 999 gp)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "Uttering a dark incantation, you summon a devil from the Nine Hells. You choose the devil’s type, which must be one of challenge rating 6 or lower, such as a barbed devil or a bearded devil. The devil appears in an unoccupied space that you can see within range. The devil disappears when it drops to 0 hit points or when the spell ends. The devil is unfriendly toward you and your companions. Roll initiative for the devil, which has its own turns. It is under the Dungeon Master’s control and acts according to its nature on each of its turns, which might result in its attacking you if it thinks it can prevail, or trying to tempt you to undertake an evil act in exchange for limited service. The DM has the creature’s statistics. On each of your turns, you can try to issue a verbal command to the devil (no action required by you). It obeys the command if the likely outcome is in accordance with its desires, especially if the result would draw you toward evil. Otherwise, you must make a Charisma (Deception, Intimidation, or Persuasion) check contested by its Wisdom (Insight) check. You make the check with advantage if you say the devil’s true name. If your check fails, the devil becomes immune to your verbal commands for the duration of the spell, though it can still carry out your commands if it chooses. If your check succeeds, the devil carries out your command — such as “attack my enemies,” “explore the room ahead,” or “bear this message to the queen” — until it completes the activity, at which point it returns to you to report having done so. If your concentration ends before the spell reaches its full duration, the devil doesn’t disappear if it has become immune to your verbal commands. Instead, it acts in whatever manner it chooses for 3d6 minutes, and then it disappears. If you possess an individual devil’s talisman, you can summon that devil if it is of the appropriate challenge rating plus 1, and it obeys all your commands, with no Charisma checks required.",
+        "duration": "Concentration, up to 1 Hour",
+        "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
+        "level": "5",
+        "name": "Infernal Calling",
+        "range": "90 feet",
+        "ritual": false,
+        "school": "Conjuration",
+        "tags": [
+			"Summoning",
+            "Control",
+            "Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Conjuration"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a pinch of phosphorus"
+            ],
+            "raw": "V, S, M (a pinch of phosphorus)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You unleash a storm of flashing light and raging thunder in a 10-foot-radius, 40-foot-high Cylinder centered on a point you can see within range. While in this area, creatures have the Blinded and Deafened conditions, and they can’t cast spells with a Verbal component. When the storm appears, each creature in it makes a Constitution saving throw, taking 2d10 Radiant damage and 2d10 Thunder damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell’s area for the first time on a turn or ends its turn there. A creature makes this save only once per turn.",
+        "duration": "Concentration, up to 1 Minute",
+        "higher_levels": "The Radiant and Thunder damage increase by 1d10 for each spell slot level above 5",
+        "level": "5",
+        "name": "Jallarzi's Storm of Radiance",
+        "range": "120 feet (10 feet)",
+        "ritual": false,
+        "school": "Evocation",
+        "tags": [
+			"Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Evocation"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a broken bone and a square of black silk"
+            ],
+            "raw": "V, M (a broken bone and a square of black silk)",
+            "somatic": false,
+            "verbal": true
+        },
+        "description": "You send ribbons of negative energy at one creature you can see within range. Unless the target is undead, it must make a Constitution saving throw, taking 5d12 necrotic damage on a failed save, or half as much damage on a successful one. A target killed by this damage rises up as a zombie at the start of your next turn. The zombie pursues whatever creature it can see that is closest to it. Statistics for the zombie are in the Monster Manual. If you target an undead with this spell, the target doesn’t make a saving throw. Instead, roll 5d12. The target gains half the total as temporary hit points.",
+        "duration": "Instantaneous",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Negative Energy Flood",
+        "range": "60 feet",
+        "ritual": false,
+        "school": "Necromancy",
+        "tags": [
+            "Creation",
+            "Damage",
+			"Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Necromancy"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Bard",
+            "Wizard",
+            "Peace Domain (TCOE)",
+            "Aberrant Sorcery"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "two eggs"
+            ],
+            "raw": "V, S, M (two eggs)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can’t communicate in any languages aren’t affected by this spell. Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can’t extend to other planes of existence.",
+        "duration": "1 Hour",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Rary's Telepathic Bond",
+        "range": "30 feet",
+        "ritual": true,
+        "school": "Divination",
+        "tags": [
+            "Communication",
+            "Bard",
+            "Wizard",
+            "Peace Domain (TCOE)",
+            "Aberrant Sorcery",
+            "level5"
+        ],
+        "type": "5th-level Divination (Ritual)"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Bard",
+            "Sorcerer",
+            "Wizard",
+            "Artificer"
+        ],
+        "components": {
+            "material": false,
+            "materials_needed": [],
+            "raw": "V, S",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "Your magic deepens a creature’s understanding of its own talent. You touch one willing creature and give it expertise in one skill of your choice; until the spell ends, the creature doubles its proficiency bonus for ability checks it makes that use the chosen skill. You must choose a skill in which the target is proficient and that isn’t already benefiting from an effect, such as Expertise, that doubles its proficiency bonus.",
+        "duration": "1 Hour",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Skill Empowerment",
+        "range": "Touch",
+        "ritual": false,
+        "school": "Transmutation",
+        "tags": [
+            "Buff",
+            "Utility",
+            "Bard",
+            "Sorcerer",
+            "Wizard",
+            "Artificer",
+            "level5"
+        ],
+        "type": "5th-level Transmutation"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Ranger",
+            "Wizard",
+            "War Domain"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a Melee weapon worth 1+ SP"
+            ],
+            "raw": "S, M (a Melee weapon worth 1+ SP)",
+            "somatic": true,
+            "verbal": false
+        },
+        "description": "You flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures you can see within range. Make a melee spell attack against each target. On a hit, a target takes 6d10 Force damage. You then teleport to an unoccupied space you can see within 5 feet of one of the targets.",
+        "duration": "Instantaneous",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Steel Wind Strike",
+        "range": "30 feet",
+        "ritual": false,
+        "school": "Conjuration",
+        "tags": [
+            "Teleportation",
+            "Damage",
+            "Combat",
+            "Ranger",
+            "Wizard",
+            "War Domain",
+            "level5"
+        ],
+        "type": "5th-level Conjuration"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Cleric",
+            "Paladin",
+            "Celestial Patron"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a reliquary worth 500+ GP"
+            ],
+            "raw": "V, S, M (a reliquary worth 500+ GP)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You call forth a Celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range and uses the Celestial Spirit stat block. When you cast the spell, choose Avenger or Defender. Your choice determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends. The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.",
+        "duration": "Concentration, up to 1 Hour",
+        "higher_levels": "Use the spell slot’s level for the spell’s level in the stat block.",
+        "level": "5",
+        "name": "Summon Celestial",
+        "range": "90 feet",
+        "ritual": false,
+        "school": "Conjuration",
+        "tags": [
+            "Cleric",
+            "Paladin",
+            "Celestial Patron",
+            "level5"
+        ],
+        "type": "5th-level Conjuration"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Wizard",
+            "Draconic Sorcery"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "an object with the image of a dragon engraved on it worth 500+ GP"
+            ],
+            "raw": "V, S, M (an object with the image of a dragon engraved on it worth 500+ GP)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You call forth a Dragon spirit. It manifests in an unoccupied space that you can see within range and uses the Draconic Spirit stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends. The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.",
+        "duration": "Concentration, up to 1 Hour",
+        "higher_levels": "Use the spell slot’s level for the spell’s level in the stat block.",
+        "level": "5",
+        "name": "Summon Dragon",
+        "range": "60 feet",
+        "ritual": false,
+        "school": "Conjuration",
+        "tags": [
+            "Wizard",
+            "Draconic Sorcery",
+            "level5"
+        ],
+        "type": "5th-level Conjuration"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": false,
+            "materials_needed": [],
+            "raw": "V, S",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius Sphere centered on that point makes an Intelligence saving throw, taking 8d6 Psychic damage on a failed save or half as much damage on a successful one. On a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts 1d6 from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain Concentration. The target makes an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "duration": "Instantaneous",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Synaptic Static",
+        "range": "120 feet (20 feet)",
+        "ritual": false,
+        "school": "Enchantment",
+        "tags": [
+            "Damage",
+            "Debuff",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Enchantment"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Sorcerer",
+            "Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a hand mirror"
+            ],
+            "raw": "V, S, M (a hand mirror)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "A shimmering wall of bright light appears at a point you choose within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 10 feet high, and 5 feet thick. The wall blocks line of sight, but creatures and objects can pass through it. It emits bright light out to 120 feet and dim light for an additional 120 feet. When the wall appears, each creature in its area must make a Constitution saving throw. On a failed save, a creature takes 4d8 radiant damage, and it is blinded for 1 minute. On a successful save, it takes half as much damage and isn’t blinded. A blinded creature can make a Constitution saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that ends its turn in the wall’s area takes 4d8 radiant damage. Until the spell ends, you can use an action to launch a beam of radiance from the wall at one creature you can see within 60 feet of it. Make a ranged spell attack. On a hit, the target takes 4d8 radiant damage. Whether you hit or miss, reduce the length of the wall by 10 feet. If the wall’s length drops to 0 feet, the spell ends.",
+        "duration": "Concentration, up to 10 Minutes",
+        "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+        "level": "5",
+        "name": "Wall of Light",
+        "range": "120 feet",
+        "ritual": false,
+        "school": "Evocation",
+        "tags": [
+            "Damage",
+            "Control",
+            "Sorcerer",
+            "Warlock",
+            "Wizard",
+            "level5"
+        ],
+        "type": "5th-level Evocation"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Druid",
+            "Ranger"
+        ],
+        "components": {
+            "material": false,
+            "materials_needed": [],
+            "raw": "V, S",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You call out to the spirits of nature to rouse them against your enemies. Choose a point you can see within range. The spirits cause trees, rocks, and grasses in a 60-foot cube centered on that point to become animated until the spell ends. Grasses and Undergrowth. Any area of ground in the cube that is covered by grass or undergrowth is difficult terrain for your enemies. Trees. At the start of each of your turns, each of your enemies within 10 feet of any tree in the cube must succeed on a Dexterity saving throw or take 4d6 slashing damage from whipping branches. Roots and Vines. At the end of each of your turns, one creature of your choice that is on the ground in the cube must succeed on a Strength saving throw or become restrained until the spell ends. A restrained creature can use an action to make a Strength (Athletics) check against your spell save DC, ending the effect on itself on a success. Rocks. As a bonus action on your turn, you can cause a loose rock in the cube to launch at a creature you can see in the cube. Make a ranged spell attack against the target. On a hit, the target takes 3d8 nonmagical bludgeoning damage, and it must succeed on a Strength saving throw or fall prone.",
+        "duration": "Concentration, up to 1 Minute",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Wrath of Nature",
+        "range": "120 feet (60 feet)",
+        "ritual": false,
+        "school": "Evocation",
+        "tags": [
+            "Damage",
+            "Control",
+            "Druid",
+            "Ranger",
+            "level5"
+        ],
+        "type": "5th-level Evocation"
+    },
+    {
+        "casting_time": "1 Action",
+        "classes": [
+			"Bard",
+            "Wizard",
+            "Oath of Glory"
+        ],
+        "components": {
+            "material": true,
+            "materials_needed": [
+                "a miniature tiara"
+            ],
+            "raw": "V, S, M (a miniature tiara)",
+            "somatic": true,
+            "verbal": true
+        },
+        "description": "You surround yourself with unearthly majesty in a 10-foot Emanation. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. On a failed save, the target takes 4d6 Psychic damage and has the Prone condition, and you can push it up to 10 feet away. On a successful save, the target takes half as much damage only. A creature makes this save only once per turn.",
+        "duration": "Concentration, up to 1 Minute",
+        "higher_levels": "",
+        "level": "5",
+        "name": "Yolande's Regal Presence",
+        "range": "Self (10 feet)",
+        "ritual": false,
+        "school": "Enchantment",
+        "tags": [
+            "Bard",
+            "Wizard",
+            "Oath of Glory",
+            "level5"
+        ],
+        "type": "5th-level Enchantment"
     }
 ]
