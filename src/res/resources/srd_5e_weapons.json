@@ -294,5 +294,109 @@
     "weight": "3 lb",
     "properties": "Special, thrown (range 5/15)",
     "type": "Martial ranged"
+  },
+  {
+    "name": "Antimatter Rifle",
+    "cost": "-",
+    "damage": "6d8 necrotic",
+    "weight": "10 lb",
+    "properties": "Ammunition (Firearms), (Range 120/360), Reload, Two-handed",
+    "type": "Firearm ranged"
+  },
+  {
+    "name": "Boomerang",
+    "cost": "-",
+    "damage": "1d4 bludgeoning",
+    "weight": "-",
+    "properties": "(Range 60/120)",
+    "type": "Simple ranged"
+  },
+  {
+    "name": "Double-Bladed Scimitar",
+    "cost": "100 gp",
+    "damage": "2d4 slashing",
+    "weight": "6 lb",
+    "properties": "Special, two-handed",
+    "type": "Martial melee"
+  },
+  {
+    "name": "Laser Pistol",
+    "cost": "-",
+    "damage": "3d6 radiant",
+    "weight": "2 lb",
+    "properties": "Ammunition (Firearms), (Range 40/120), Reload",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Laser Rifle",
+    "cost": "-",
+    "damage": "3d8 radiant",
+    "weight": "7 lb",
+    "properties": "Ammunition (Firearms), (Range 100/300), Reload, Two-handed",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Musket",
+    "cost": "500 gp",
+    "damage": "1d12 piercing",
+    "weight": "10 lb",
+    "properties": "Ammunition (Firearms), (Range 40/120), loading, Two-handed, slow",
+    "type": "Martial ranged"
+  },
+  {
+    "name": "Pistol",
+    "cost": "250 gp",
+    "damage": "1d10 piercing",
+    "weight": "3 lb",
+    "properties": "Ammunition (Firearms), (Range 30/90), loading, vex",
+    "type": "Martial ranged"
+  },
+  {
+    "name": "Pistol, Automatic",
+    "cost": "-",
+    "damage": "2d6 piercing",
+    "weight": "3 lb",
+    "properties": "Ammunition (Firearms), (Range 50/150), Reload",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Revolver",
+    "cost": "-",
+    "damage": "2d8 piercing",
+    "weight": "3 lb",
+    "properties": "Ammunition (Firearms), (Range 40/120), Reload",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Rifle, Automatic",
+    "cost": "-",
+    "damage": "2d8 piercing",
+    "weight": "8 lb",
+    "properties": "Ammunition (Firearms), (Range 80/240), Reload, two-handed, burst fire",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Rifle, Hunting",
+    "cost": "-",
+    "damage": "2d10 piercing",
+    "weight": "8 lb",
+    "properties": "Ammunition (Firearms), (Range 80/240), Reload, two-handed",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Shotgun",
+    "cost": "-",
+    "damage": "2d8 piercing",
+    "weight": "7 lb",
+    "properties": "Ammunition (Firearms), (Range 30/90), Reload, two-handed",
+    "type": "Firearms ranged"
+  },
+  {
+    "name": "Yklwa",
+    "cost": "1 gp",
+    "damage": "1d8 piercing",
+    "weight": "2 lb",
+    "properties": "Thrown (range 10/30)",
+    "type": "Simple melee"
   }
 ]
