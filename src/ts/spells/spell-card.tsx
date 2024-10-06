@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import {
+  Box,
   Card,
   CardContent,
   Container,
@@ -35,10 +36,14 @@ const SpellCard: FC<{ spell: Spell }> = ({ spell }) => {
               <Typography variant="subtitle1">{`Classes: ${spell.classes.join(', ')}`}</Typography>
             </Stack>
           </Container>
-          <Container>
+          <Container sx={{ margin: 1 }}>
             <Divider orientation="horizontal" sx={{ margin: 1 }} />
             <Typography variant="h5">Description</Typography>
             <Typography variant="subtitle1">{spell.description}</Typography>
+            {spell.higher_levels && <Box marginTop={2}>
+              <Typography variant="h5">At Higher Levels</Typography>
+              <Typography variant="subtitle1">{spell.higher_levels}</Typography>
+            </Box>}
           </Container>
         </Stack>
       </CardContent>
