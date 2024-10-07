@@ -1,7 +1,7 @@
 import React from 'react';
-import { GridColDef } from "@mui/x-data-grid";
-import { Armour, Gear, Weapon } from "../types/Gear";
-import { Container, Typography } from "@mui/material";
+import { GridColDef } from '@mui/x-data-grid';
+import { Armour, Gear, Weapon } from '../types/Gear';
+import { Container, Typography } from '@mui/material';
 
 const weaponColumnDescriptor: GridColDef<Weapon>[] = [
   {
@@ -10,7 +10,11 @@ const weaponColumnDescriptor: GridColDef<Weapon>[] = [
     flex: 1,
     sortable: true,
     filterable: true,
-    renderCell: (params) => ((<Typography mt={1} mb={1}>{params.value}</Typography>))
+    renderCell: (params) => (
+      <Typography mt={1} mb={1}>
+        {params.value}
+      </Typography>
+    ),
   },
   {
     field: 'damage',
@@ -36,15 +40,9 @@ const weaponColumnDescriptor: GridColDef<Weapon>[] = [
   {
     field: 'properties',
     headerName: 'Properties',
-    flex: 3,
+    flex: 2,
     sortable: true,
     filterable: true,
-    renderCell: (params) => (
-      <Container sx={{ mt: 1, mb: 1 }}>
-        <Typography>{params.value}</Typography>
-        <Typography>{params.row.description}</Typography>
-      </Container>
-    )
   },
   {
     field: 'type',
@@ -62,7 +60,11 @@ const armourColumnDescriptor: GridColDef<Armour>[] = [
     flex: 1,
     sortable: true,
     filterable: true,
-    renderCell: (params) => ((<Typography mt={1} mb={1}>{params.value}</Typography>))
+    renderCell: (params) => (
+      <Typography mt={1} mb={1}>
+        {params.value}
+      </Typography>
+    ),
   },
   {
     field: 'AC',
@@ -92,16 +94,10 @@ const armourColumnDescriptor: GridColDef<Armour>[] = [
     filterable: true,
     renderCell: (params) => {
       const requirements = params.row.strength ? [params.row.strength] : [];
-      if (params.row.stealth) requirements.push(`${params.row.stealth} (Stealth)`);
-      return (<Typography>{requirements.join(', ')}</Typography>)
-    }
-  },
-  {
-    field: 'description',
-    headerName: 'Description',
-    flex: 3,
-    sortable: true,
-    filterable: true,
+      if (params.row.stealth)
+        requirements.push(`${params.row.stealth} (Stealth)`);
+      return <Typography>{requirements.join(', ')}</Typography>;
+    },
   },
   {
     field: 'type',
@@ -119,7 +115,11 @@ const gearColumnDescriptor: GridColDef<Gear>[] = [
     flex: 1.5,
     sortable: true,
     filterable: true,
-    renderCell: (params) => ((<Typography mt={1} mb={1}>{params.value}</Typography>))
+    renderCell: (params) => (
+      <Typography mt={1} mb={1}>
+        {params.value}
+      </Typography>
+    ),
   },
   {
     field: 'cost',
@@ -132,13 +132,6 @@ const gearColumnDescriptor: GridColDef<Gear>[] = [
     field: 'weight',
     headerName: 'Weight',
     flex: 0.5,
-    sortable: true,
-    filterable: true,
-  },
-  {
-    field: 'description',
-    headerName: 'Description',
-    flex: 3,
     sortable: true,
     filterable: true,
   },

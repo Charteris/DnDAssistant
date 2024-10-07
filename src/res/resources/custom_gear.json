@@ -1,9 +1,30 @@
 [
   {
     "name": "Lute of Illusions",
-    "cost": "100 gp",
+    "cost": "500 gp",
     "weight": "1 lb.",
     "type": "Wondrous instrument",
     "description": "When this instrument is played, an illusion of the wielder appears beside them which can be mentally controlled to move within sight of the wielder and even interact with illusory props. Once the wielder stops playing this instrument, the illusion dissipates."
+  },
+  {
+    "name": "Whispering Helmet",
+    "cost": "150 gp",
+    "weight": "1 lb.",
+    "type": "Wondrous helmet",
+    "description": "This helmet looks like a standard steel helmet. When the bearer equips this helmet, they feel an immediate sting on the top of their head inflicting 1d4 piercing damage and cannot remove the helmet without force. If the helmet is removed by force, they are attacked by the mimic inhabiting the helmet. Once per day, the bearer must *feed* the helmet by dousing it in the entrails of a fallen enemy or deal 1d8 piercing damage as the mimic feasts on the bearers brain-matter through their ear. After a week of the bearer successfully feeding the helmet, the bearer is capable of basic telepathic communication with the mimic which "
+  },
+  {
+    "name": "Homunculus",
+    "cost": "400 gp",
+    "weight": "1 lb.",
+    "type": "Servant",
+    "description": "Just your standard, everyday homunculi. We won't judge what you use it for so long as you pay the price."
+  },
+  {
+    "name": "Runestone",
+    "cost": "250 gp",
+    "weight": "1 lb.",
+    "type": "Rune",
+    "description": "Runestones imbue magic with additional essence empowering magical abilities. These are typically elemental runes which often result in extended elemental effects."
   }
 ]

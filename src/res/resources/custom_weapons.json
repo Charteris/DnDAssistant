@@ -1,20 +1,47 @@
 [
   {
     "name": "Maelstrom Dagger",
-    "cost": "100 gp",
+    "cost": "400 gp",
     "damage": "1d4 piercing",
     "weight": "1 lb.",
     "properties": "Finesse, light, thrown (range 20/60)",
     "type": "Wondrous melee",
-    "description": "When thrown, this dagger arcs in a 15-foot diameter circle back into the wielders hand. During this arc, the dagger transforms into an illusory cloud of daggers within a 5-foot cube and deals 4d4 force damage to any creatures within the clouds arc."
+    "description": "When thrown, this dagger arcs in a 15-foot diameter circle back into the wielders hand. During this arc, the dagger transforms into an illusory cloud of daggers within a 5-foot cube and deals 4d4 force damage to *all* creatures within the clouds arc."
   },
   {
     "name": "Sword of the Voidcaller",
-    "cost": "inf",
+    "cost": "Non-transferable",
     "damage": "2d6 force",
     "weight": "6 lb.",
     "properties": "Heavy, two-handed",
     "type": "Wondrous melee",
     "description": "This weapon is bound to the \"voidcaller\" and cannot be transferred or sold. If a transfer is attempted, the sword evaporates into shadow once the voidcaller releases the blade and re-manifests in their hand after. \nThis weapon along with the associated armour can absorb elemental essence which has been bound to any non-ephemeral plane, transforming the blade into one which abides by this element and dealing elemental damage accordingly. At any time, the voidcaller can nullify this effect, reverting the blade to its standard ephemeral form to deal force damage."
+  },
+  {
+    "name": "Tooth of the Bear",
+    "cost": "500 gp",
+    "damage": "N/A",
+    "weight": "1 lb",
+    "properties": "Amulet",
+    "type": "Wondrous amulet",
+    "description": "Once per long rest, the wielder can stroke the bears tooth and be transformed into a werebear for 1 minute (9 rounds). During this duration, the health damage and actions available to the wielder are governed by the werebear datasheet and the wielders health is treated as that of the werebear. Any damage taken during this time is inflicted back to the wielders original health once they transform back."
+  },
+  {
+    "name": "Staff of Branding",
+    "cost": "800 gp",
+    "damage": "1d6 bludgeoning",
+    "weight": "4 lb",
+    "properties": "Versatile (1d8)",
+    "type": "Wondrous melee",
+    "description": "As an action, the weilder can brand a creature of lower intelligence. They must succeed a DC8 intelligence saving throw or be controlled by the master. As a ritual, the wielder can select a lesser corpse which is still fresh and resurrect it as a mindless, undead servant. The number of creatures which can be controlled through this method is proportional to the weilders magical ability (consult the DM)."
+  },
+  {
+    "name": "Astral Cannon",
+    "cost": "450 gp",
+    "damage": "2d8 force",
+    "weight": "4 lb",
+    "properties": "Light",
+    "type": "Wondrous ranged",
+    "description": "This cannon uses the wielders dexterity to attack targets. The chamber of this weapon has been bound to the Astral plane allowing it to manifest ammunition directly into the barrel. Before each hit roll, the bearer must succeed a raw DC4 saving throw or take 1d6 force damage as the cannon explodes in the wielders palm, causing the weapons to misfire. This explosion is isolated to the cannons chamber and does not destroy the weapon."
   }
 ]
