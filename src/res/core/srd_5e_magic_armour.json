@@ -1,13 +1,17 @@
 [
     {
-      "name": "Armour of Gleaming",
-      "type": "Breastplate",
-      "rarity": "Common",
-      "weight": "Medium, Heavy",
-      "description": "This armour never gets dirty."
+        "name": "Armour of Gleaming",
+        "cost": "",
+        "AC": "",
+        "type": "Breastplate",
+        "rarity": "Common",
+        "weight": "Medium, Heavy",
+        "description": "This armour never gets dirty."
     },
     {
         "name": "Cast-Off Armour",
+        "cost": "",
+        "AC": "",
         "type": "Breastplate",
         "rarity": "Common",
         "weight": "Light, Medium, Heavy",
@@ -15,6 +19,8 @@
     },
     {
         "name": "Shield of Expression",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Common",
         "weight": "",
@@ -22,6 +28,8 @@
     },
     {
         "name": "Smoldering Armour",
+        "cost": "",
+        "AC": "",
         "type": "Hide",
         "rarity": "Common",
         "weight": "Any",
@@ -29,6 +37,8 @@
     },
     {
         "name": "Adamantine Armour",
+        "cost": "",
+        "AC": "",
         "type": "Any except Hide",
         "rarity": "Uncommon",
         "weight": "Medium, Heavy",
@@ -36,6 +46,8 @@
     },
     {
         "name": "Mariner's Armour",
+        "cost": "",
+        "AC": "",
         "type": "",
         "rarity": "Uncommon",
         "weight": "Light, Medium, Heavy",
@@ -44,6 +56,8 @@
     },
     {
         "name": "Mithral Armour",
+        "cost": "",
+        "AC": "",
         "type": "Any except Hide",
         "rarity": "Uncommon",
         "weight": "Medium, Heavy",
@@ -52,6 +66,8 @@
     },
     {
         "name": "Sentinel Shield",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Uncommon",
         "weight": "",
@@ -60,6 +76,8 @@
     },
     {
         "name": "Shield +1",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Uncommon",
         "weight": "",
@@ -68,6 +86,8 @@
     },
     {
         "name": "Armour of Resistance",
+        "cost": "",
+        "AC": "",
         "type": "Breastplate",
         "rarity": "Rare",
         "weight": "Light, Medium, Heavy",
@@ -76,6 +96,8 @@
     },
     {
         "name": "Armour of Vulnerability",
+        "cost": "",
+        "AC": "",
         "type": "Plate",
         "rarity": "Rare",
         "weight": "",
@@ -84,6 +106,8 @@
     },
     {
         "name": "Armour +1",
+        "cost": "",
+        "AC": "",
         "type": "",
         "rarity": "Rare",
         "weight": "Light, Medium, Heavy",
@@ -92,6 +116,8 @@
     },
     {
         "name": "Arrow-Catching Shield",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Rare",
         "weight": "",
@@ -100,6 +126,8 @@
     },
     {
         "name": "Demon Skin",
+        "cost": "",
+        "AC": "",
         "type": "Any",
         "rarity": "Rare",
         "weight": "Heavy",
@@ -108,6 +136,8 @@
     },
     {
         "name": "Dragonguard",
+        "cost": "",
+        "AC": "",
         "type": "Breastplate",
         "rarity": "Rare",
         "weight": "",
@@ -116,6 +146,8 @@
     },
     {
         "name": "Elven Chain",
+        "cost": "",
+        "AC": "",
         "type": "Chain Shirt",
         "rarity": "Rare",
         "weight": "Medium",
@@ -124,6 +156,8 @@
     },
     {
         "name": "Glamoured Studded Leather",
+        "cost": "",
+        "AC": "",
         "type": "Studded Leather",
         "rarity": "Rare",
         "weight": "",
@@ -132,6 +166,8 @@
     },
     {
         "name": "Shield of Missile Attraction",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Rare",
         "weight": "",
@@ -140,6 +176,8 @@
     },
     {
         "name": "Shield +2",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Rare",
         "weight": "",
@@ -148,6 +186,8 @@
     },
     {
         "name": "Animated Shield",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Very Rare",
         "weight": "",
@@ -156,6 +196,8 @@
     },
     {
         "name": "Armour +2",
+        "cost": "",
+        "AC": "",
         "type": "",
         "rarity": "Very Rare",
         "weight": "Light, Medium, Heavy",
@@ -164,6 +206,8 @@
     },
     {
         "name": "Demon Armour",
+        "cost": "",
+        "AC": "",
         "type": "Plate",
         "rarity": "Very Rare",
         "weight": "",
@@ -172,6 +216,8 @@
     },
     {
         "name": "Dragon Scale Mail",
+        "cost": "",
+        "AC": "",
         "type": "Scale Mail",
         "rarity": "Very Rare",
         "weight": "",
@@ -180,6 +226,8 @@
     },
     {
         "name": "Dwarven Plate",
+        "cost": "",
+        "AC": "",
         "type": "Plate",
         "rarity": "Very Rare",
         "weight": "",
@@ -188,6 +236,8 @@
     },
     {
         "name": "Shield +3",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Very Rare",
         "weight": "",
@@ -196,6 +246,8 @@
     },
     {
         "name": "Spellguard Shield",
+        "cost": "",
+        "AC": "",
         "type": "Shield",
         "rarity": "Very Rare",
         "weight": "",
@@ -204,6 +256,8 @@
     },
     {
         "name": "Armour of Invulnerability",
+        "cost": "",
+        "AC": "",
         "type": "Plate",
         "rarity": "Legendary",
         "weight": "",
@@ -212,6 +266,8 @@
     },
     {
         "name": "Armour +3",
+        "cost": "",
+        "AC": "",
         "type": "",
         "rarity": "Legendary",
         "weight": "Light, Medium, Heavy",
@@ -220,6 +276,8 @@
     },
     {
         "name": "Efreeti Chain",
+        "cost": "",
+        "AC": "",
         "type": "Chain Mail",
         "rarity": "Legendary",
         "weight": "",
@@ -228,6 +286,8 @@
     },
     {
         "name": "Plate Armour of Etherealness",
+        "cost": "",
+        "AC": "",
         "type": "Plate",
         "rarity": "Legendary",
         "weight": "",

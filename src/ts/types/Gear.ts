@@ -1,8 +1,10 @@
-import gear from '../../res/resources/srd_5e_gear.json';
-import weapon from '../../res/resources/srd_5e_weapons.json';
-import armour from '../../res/resources/srd_5e_armour.json';
-
-export type Gear = typeof gear[0] & { description?: string };
+export type Gear = {
+  name: string,
+  cost: string,
+  weight: string,
+  type: string,
+  description?: string
+};
 export const defaultGear: Gear = {
   name: "",
   cost: "1 cp",
@@ -11,7 +13,26 @@ export const defaultGear: Gear = {
   description: ""
 };
 
-export type Weapon = typeof weapon[0] & { description?: string };
+type BaseWeapon = {
+  name: string,
+  cost: string,
+  damage: string,
+  weight: string,
+  properties: string,
+  type: string,
+  description?: string
+}
+export type Weapon = BaseWeapon & {
+  rarity?: string,
+  attunement?: string,
+  bonus?: string,
+  advantage?: string,
+  immunity?: string,
+  sense?: string,
+  proficiency?: string,
+  cursed?: boolean,
+  notes?: string
+};
 export const defaultWeapon = {
   name: "",
   cost: "1 cp",
@@ -22,7 +43,20 @@ export const defaultWeapon = {
   description: ""
 };
 
-export type Armour = typeof armour[0] & { description?: string };
+type BaseArmour = {
+  name: string,
+  cost: string,
+  AC: string,
+  strength?: string,
+  stealth?: string,
+  weight: string,
+  type: string,
+  description?: string
+};
+export type Armour = BaseArmour & {
+  rarity?: string,
+  attunement?: string
+}
 export const defaultArmour = {
   name: "",
   cost: "1 cp",

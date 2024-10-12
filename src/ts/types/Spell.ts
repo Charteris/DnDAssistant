@@ -1,4 +1,4 @@
-import spells from '../../res/resources/srd_5e_spells.json';
+import spells from '../../res/core/srd_5e_spells.json';
 
 export type SpellComponent = {
   material: boolean,

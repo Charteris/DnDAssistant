@@ -1,11 +1,22 @@
-import monsters from '../../res/resources/srd_5e_monsters.json';
+import monsters from '../../res/core/srd_5e_monsters.json';
 
-export const PLACEHOLDER_IMAGES = {
-  humanoid: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg",
-  undead: "https://media-waterdeep.cursecdn.com/attachments/2/660/undead.jpg",
-  beast: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg",
-  plant: "https://media-waterdeep.cursecdn.com/attachments/2/659/plant.jpg",
-  ooze: "https://media-waterdeep.cursecdn.com/attachments/2/658/ooze.jpg"
+import aberration from "../../res/images/aberration-icon.jpg";
+import beast from "../../res/images/beast-icon.jpg";
+import celestial from "../../res/images/celestial-icon.jpg";
+import construct from "../../res/images/construct-icon.jpg";
+import dragon from "../../res/images/dragon-icon.jpg";
+import elemental from "../../res/images/elemental-icon.jpg";
+import fey from "../../res/images/fey-icon.jpg";
+import fiend from "../../res/images/fiend-icon.jpg";
+import giant from "../../res/images/giant-icon.jpg";
+import humanoid from "../../res/images/humanoid-icon.jpg";
+import monstrosity from "../../res/images/monstrosity-icon.jpg";
+import ooze from "../../res/images/ooze-icon.jpg";
+import plant from "../../res/images/plant-icon.jpg";
+import undead from "../../res/images/undead-icon.jpg";
+
+export const PLACEHOLDER_IMAGES: { [key: string]: string } = {
+  aberration, beast, celestial, construct, dragon, elemental, fey, fiend, giant, humanoid, monstrosity, ooze, plant, undead
 };
 
 export type Monster = {

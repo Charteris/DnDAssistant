@@ -11,7 +11,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import spells from '../../res/resources/srd_5e_spells.json';
+import spells from '../../res/core/srd_5e_spells.json';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import { Spell } from '../types/Spell';
 import { useState } from 'react';

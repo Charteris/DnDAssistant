@@ -1,7 +1,7 @@
 import React from 'react';
 import { GridColDef } from '@mui/x-data-grid';
 import { Armour, Gear, Weapon } from '../types/Gear';
-import { Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 const weaponColumnDescriptor: GridColDef<Weapon>[] = [
   {
@@ -40,7 +40,7 @@ const weaponColumnDescriptor: GridColDef<Weapon>[] = [
   {
     field: 'properties',
     headerName: 'Properties',
-    flex: 2,
+    flex: 1.5,
     sortable: true,
     filterable: true,
   },
@@ -50,7 +50,7 @@ const weaponColumnDescriptor: GridColDef<Weapon>[] = [
     flex: 1,
     sortable: true,
     filterable: true,
-  },
+  }
 ];
 
 const armourColumnDescriptor: GridColDef<Armour>[] = [

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Lizardfolk pyjamas",
+    "cost": "600 gp",
+    "AC": "14 + Dex modifier",
+    "strength": "",
+    "stealth": "",
+    "weight": "8 lb",
+    "type": "Light under armour"
+  },
+  {
+    "name": "Nightbringer",
+    "cost": "550 gp",
+    "AC": "14 + Dex modifier",
+    "strength": "",
+    "stealth": "",
+    "weight": "8 lb",
+    "type": "Clothing",
+    "description": "A beautiful, black battle dress which is ordained with long, thing blades. Three petruding in an arrow formation on each sleeve; two evenly placed on the "
+  },
+  {
+    "name": "Wizards Robes",
+    "cost": "150 gp",
+    "AC": "12 + Int modifier",
+    "strength": "",
+    "stealth": "",
+    "weight": "2 lb",
+    "type": "Clothing",
+    "description": "+2 AC and resistance to singular elemental damage"
+  }
+]

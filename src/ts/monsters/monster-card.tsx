@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useCallback } from 'react';
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { Monster } from '../types/Monster';
+import { Monster, PLACEHOLDER_IMAGES } from '../types/Monster';
 
 const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
   const statsA = [
@@ -22,6 +22,14 @@ const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
     { key: 'WIS', value: `${monster.WIS} ${monster.WIS_mod}` },
     { key: 'CHA', value: `${monster.CHA} ${monster.CHA_mod}` },
   ];
+
+  const getImageUrl = () => {
+    if (monster.img_url) return monster.img_url;
+    const key = Object.keys(PLACEHOLDER_IMAGES).find(
+      (key) => monster.meta.toLowerCase().includes(key)
+    );
+    return PLACEHOLDER_IMAGES[key ?? "humanoid"];
+  };
 
   return (
     <Card sx={{ m: 2 }}>
@@ -44,7 +52,7 @@ const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
             >
               <CardMedia
                 component="img"
-                src={monster.img_url}
+                src={getImageUrl()}
                 sx={{
                   width: '50%',
                   aspectRatio: '1/1',

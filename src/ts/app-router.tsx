@@ -6,7 +6,7 @@ import Mechanics from './mechanics/mechanics';
 import SpellTable from './spells/spell-table';
 import Shop from './gear/gear';
 import CampaignManager from './campaigns/campaign-manager';
-import Header from './Header';
+import Header from './header';
 
 const AppRouter = () => {
   const router = createHashRouter([

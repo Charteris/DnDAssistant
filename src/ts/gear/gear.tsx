@@ -3,6 +3,7 @@ import {
   Box,
   Container,
   Divider,
+  FormControlLabel,
   Paper,
   Stack,
   Switch,
@@ -11,12 +12,14 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import armours from '../../res/resources/srd_5e_armour.json';
-import custom_armours from '../../res/resources/custom_armour.json';
-import weapons from '../../res/resources/srd_5e_weapons.json';
-import custom_weapons from '../../res/resources/custom_weapons.json';
-import gears from '../../res/resources/srd_5e_gear.json';
-import custom_gears from '../../res/resources/custom_gear.json';
+import armours from '../../res/core/srd_5e_armour.json';
+import magic_armours from '../../res/core/srd_5e_magic_armour.json';
+import custom_armours from '../../res/core/custom_armour.json';
+import weapons from '../../res/core/srd_5e_weapons.json';
+import magic_weapons from '../../res/core/srd_5e_magic_weapons.json';
+import custom_weapons from '../../res/core/custom_weapons.json';
+import gears from '../../res/core/srd_5e_gear.json';
+import custom_gears from '../../res/core/custom_gear.json';
 import {
   armourColumnDescriptor,
   weaponColumnDescriptor,
@@ -40,11 +43,11 @@ export default function MonsterTable() {
   const [showDescription, setShowDescription] = React.useState(false);
   const sections: SectionsType = {
     Weapons: {
-      rows: [...weapons, ...custom_weapons],
+      rows: [...weapons, ...magic_weapons, ...custom_weapons],
       columns: weaponColumnDescriptor,
     },
     Armour: {
-      rows: [...armours, ...custom_armours],
+      rows: [...armours, ...magic_armours, ...custom_armours],
       columns: armourColumnDescriptor,
     },
     Gear: { rows: [...gears, ...custom_gears], columns: gearColumnDescriptor },
@@ -97,10 +100,15 @@ export default function MonsterTable() {
                 <Tab label={title} value={title} />
               ))}
             </Tabs>
-            <Switch
-              checked={showDescription}
-              onChange={(_event, checked) => setShowDescription(checked)}
-              inputProps={{ 'aria-label': 'controlled' }}
+            <FormControlLabel
+              value="start"
+              control={<Switch
+                checked={showDescription}
+                onChange={(_event, checked) => setShowDescription(checked)}
+                inputProps={{ 'aria-label': 'controlled' }}
+              />}
+              label="Show Descriptions"
+              labelPlacement="start"
             />
           </Stack>
           <Paper sx={{ m: 2 }}>
