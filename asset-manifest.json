@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/DnDAssistant/static/js/main.bb48319a.js",
+    "main.js": "/DnDAssistant/static/js/main.49b2516d.js",
     "static/js/318.096ee082.chunk.js": "/DnDAssistant/static/js/318.096ee082.chunk.js",
     "static/media/Avandria.png": "/DnDAssistant/static/media/Avandria.aba68b144e09ff63f465.png",
     "static/media/dragonbane_citadel.png": "/DnDAssistant/static/media/dragonbane_citadel.ca39348650a3c5ea8f65.png",
@@ -11,11 +11,25 @@
     "static/media/mooncrest.png": "/DnDAssistant/static/media/mooncrest.1b5cf98164728c744df2.png",
     "static/media/bridgewater.png": "/DnDAssistant/static/media/bridgewater.b70ff67b6ff7a7aab68e.png",
     "static/media/sable_creek.png": "/DnDAssistant/static/media/sable_creek.bca8f4c52f10b383fc9f.png",
+    "static/media/celestial-icon.jpg": "/DnDAssistant/static/media/celestial-icon.f2be464d429ee2e004a9.jpg",
+    "static/media/elemental-icon.jpg": "/DnDAssistant/static/media/elemental-icon.54b0eb436f78daa07d48.jpg",
+    "static/media/monstrosity-icon.jpg": "/DnDAssistant/static/media/monstrosity-icon.30df1a97efc3168ab685.jpg",
+    "static/media/aberration-icon.jpg": "/DnDAssistant/static/media/aberration-icon.bfd4c66879514f428456.jpg",
+    "static/media/giant-icon.jpg": "/DnDAssistant/static/media/giant-icon.b055c439eb54103673b7.jpg",
+    "static/media/dragon-icon.jpg": "/DnDAssistant/static/media/dragon-icon.598073ee30f076206562.jpg",
+    "static/media/beast-icon.jpg": "/DnDAssistant/static/media/beast-icon.c9df6e77513ff0afe556.jpg",
+    "static/media/fey-icon.jpg": "/DnDAssistant/static/media/fey-icon.284ce9820f768c10449c.jpg",
+    "static/media/fiend-icon.jpg": "/DnDAssistant/static/media/fiend-icon.f459204b2d7769fa8232.jpg",
+    "static/media/construct-icon.jpg": "/DnDAssistant/static/media/construct-icon.f88fcc5fabd3eb7d0849.jpg",
+    "static/media/undead-icon.jpg": "/DnDAssistant/static/media/undead-icon.88513dfc4f64f4273a2a.jpg",
+    "static/media/humanoid-icon.jpg": "/DnDAssistant/static/media/humanoid-icon.36f75ab1e3fd6d9f2a93.jpg",
+    "static/media/plant-icon.jpg": "/DnDAssistant/static/media/plant-icon.7fb308a1ac2dcec9c538.jpg",
+    "static/media/ooze-icon.jpg": "/DnDAssistant/static/media/ooze-icon.5538a1b3bde165a447af.jpg",
     "index.html": "/DnDAssistant/index.html",
-    "main.bb48319a.js.map": "/DnDAssistant/static/js/main.bb48319a.js.map",
+    "main.49b2516d.js.map": "/DnDAssistant/static/js/main.49b2516d.js.map",
     "318.096ee082.chunk.js.map": "/DnDAssistant/static/js/318.096ee082.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bb48319a.js"
+    "static/js/main.49b2516d.js"
   ]
 }
