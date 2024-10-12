@@ -21,6 +21,10 @@
   {
     "name": "Wizards Robes",
     "cost": "150 gp",
+    "AC": "12 + Int modifier",
+    "strength": "",
+    "stealth": "",
+    "weight": "2 lb",
     "type": "Clothing",
     "description": "+2 AC and resistance to singular elemental damage"
   }
