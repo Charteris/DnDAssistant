@@ -25,8 +25,10 @@ const SpellEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpda
     if (components.material) { rawComponents.push('M'); }
     if (components.somatic) { rawComponents.push('S'); }
     if (components.verbal) { rawComponents.push('V'); }
-    rawComponents.push(...(components.materials_needed ?? []));
-    components.raw = rawComponents.join(', ');
+    const rawMaterialsNeeded = components.materials_needed.length > 0
+      ? ` (${components.materials_needed.join(', ')})`
+      : '';
+    components.raw = rawComponents.join(', ') + rawMaterialsNeeded;
     return components
   }, [newSpell]);
 
@@ -40,7 +42,7 @@ const SpellEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpda
     ];
 
     spell.type = isCantrip
-      ? `${spell.school} ${spell.level}`
+      ? `${spell.school[0].toUpperCase() + spell.school.slice(1)} ${spell.level}`
       : `${getNumberingPostfix(spell.level)} ${spell.school}`
     if (spell.ritual) spell.type += ' (ritual)';
 
@@ -57,6 +59,13 @@ const SpellEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpda
         onChange={(event) => setNewSpell({ ...newSpell, name: event.target.value })}
         onBlur={onUpdateGearFormatted}
         label="Name"
+      />
+      <TextField
+        fullWidth
+        value={newSpell.casting_time}
+        onChange={(event) => setNewSpell({ ...newSpell, casting_time: event.target.value })}
+        onBlur={onUpdateGearFormatted}
+        label="Casting Time"
       />
       <Autocomplete
         fullWidth
@@ -106,19 +115,19 @@ const SpellEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpda
               label="Verbal"
             />
           </Stack>
-          <TextField
+          <Autocomplete
             fullWidth
-            value={newSpell.name}
-            onChange={(event) => setNewSpell({
+            multiple
+            freeSolo
+            value={newSpell.components.materials_needed}
+            onChange={(_event, materials_needed) => setNewSpell({
               ...newSpell,
-              components: getNewComponents({
-                materials_needed: [
-                  ...newSpell.components.materials_needed, event.target.value
-                ]
-              })
+              components: getNewComponents({ materials_needed })
             })}
             onBlur={onUpdateGearFormatted}
-            label="Materials Needed"
+            options={[]}
+            renderInput={(params) => (<TextField {...params} label="Materials Needed" />)}
+            sx={{ flexGrow: 1, flexDirection: 'column' }}
           />
         </Stack>
       </Stack>
@@ -180,8 +189,8 @@ const SpellEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpda
         fullWidth
         multiline
         rows={4}
-        value={newSpell.description}
-        onChange={(event) => setNewSpell({ ...newSpell, description: event.target.value })}
+        value={newSpell.higher_levels}
+        onChange={(event) => setNewSpell({ ...newSpell, higher_levels: event.target.value })}
         onBlur={onUpdateGearFormatted}
         label="Higher Levels"
       />
