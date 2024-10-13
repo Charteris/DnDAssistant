@@ -43,5 +43,14 @@
     "properties": "Light",
     "type": "Wondrous ranged",
     "description": "This cannon uses the wielders dexterity to attack targets. The chamber of this weapon has been bound to the Astral plane allowing it to manifest ammunition directly into the barrel. Before each hit roll, the bearer must succeed a raw DC4 saving throw or take 1d6 force damage as the cannon explodes in the wielders palm, causing the weapons to misfire. This explosion is isolated to the cannons chamber and does not destroy the weapon."
+  },
+  {
+    "name": "Serrating Claws",
+    "cost": "350 gp",
+    "damage": "1d6 piercing + 1d6 slashing",
+    "weight": "4 lb",
+    "properties": "Light",
+    "type": "Wondrous melee",
+    "description": "These claws are from a Demonforged Mech Suit. They are made from a heavy mineral, requiring the wielder to have a strength of 15+ to be used."
   }
 ]

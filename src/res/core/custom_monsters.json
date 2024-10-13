@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "name": "Demonforged Mech Suit",
+    "meta": "Large construct, chaotic evil",
+    "AC": "18 (Natural Armor)",
+    "HP": "110",
+    "Speed": "40 ft.",
+    "STR": "18",
+    "STR_mod": "(+4)",
+    "DEX": "8",
+    "DEX_mod": "(-1)",
+    "CON": "20",
+    "CON_mod": "(+5)",
+    "INT": "10",
+    "INT_mod": "(+0)",
+    "WIS": "10",
+    "WIS_mod": "(+0)",
+    "CHA": "2",
+    "CHA_mod": "(-4)",
+    "Saving_Throws": "CON +6",
+    "Skills": "",
+    "Damage_Vulnerabilities": "Lightning",
+    "Damage_Resistances": "Slashing, Fire",
+    "Damage_Immunities": "",
+    "Condition_Immunities": "",
+    "Senses": "Passive Perception 8",
+    "Languages": "Every Language (demon core processor)",
+    "Challenge": "5 (1,800 XP)",
+    "Traits": "<p><em><strong>Exo Skeleton.</strong></em> A sentient creature inhabits and controls the Mech Suit from within. Oncesubstantial damage is dealt to the mech suit, the creature within may be exposed.</p><p><em><strong>Demon Forged</strong></em> This mech suit was forged by a demon of hell at a demon forge providing itresistance to fire damage. It also imbues the create inhabiting the suit with hatred, forcing their alignment to bechaotic evil.</p>",
+    "Actions": "<p><em><strong>Multiattack.</strong></em> The Mech Suit makes two attacks with its Serrator Claws.</p><p><em><strong>Serrator Claws.</strong></em> +7 to hit, reach 10 ft., one target. <em>Hit:</em> 1d8 slashing damage and  1d8 piercing damage.</p><p><em><strong>Astral Cannon.</strong></em> +7 to hit, range 60/360 ft., one target. <em>Hit:</em> 2d8 force damage.</p>",
+    "img_url": "https://wh40k.lexicanum.com/mediawiki/images/e/e3/GhazSaga.jpg"
+  }
+]

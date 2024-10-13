@@ -11,7 +11,6 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import monsters from '../../res/core/srd_5e_monsters.json';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import { Monster } from '../types/Monster';
 import PageIterator from '../shared/page-iterator';
@@ -20,10 +19,8 @@ import { Close } from '@mui/icons-material';
 import { monsterColumnDescriptor } from './monster-column-descriptor';
 import CreateMonster from './create-monster';
 
-import simple_monsters from '../../res/core/lachlan_monsters.json';
-import extra_monsters from '../../res/core/lachlan_monsters_extra.json';
-
-import filtered_monsters from '../../res/core/filtered_monsters.json'
+import filtered_monsters from '../../res/core/filtered_monsters.json';
+import custom_monsters from '../../res/core/custom_monsters.json';
 
 const MonsterTable: FC<{
   onRowClick?: (params: GridRowParams) => void;
@@ -33,9 +30,7 @@ const MonsterTable: FC<{
   const [selectedMonster, setSelectedMonster] = useState<Monster | null>(null);
   const [monsterIndex, setMonsterIndex] = useState<number>(0);
 
-  const all_monsters = [...simple_monsters, ...extra_monsters]
-
-  const filteredMonsters = filtered_monsters.filter((monster) =>
+  const filteredMonsters = [...filtered_monsters, ...custom_monsters].filter((monster) =>
     searchQuery
       .split('+')
       .some((query) => monster.name.toLowerCase().includes(query.toLowerCase()))
