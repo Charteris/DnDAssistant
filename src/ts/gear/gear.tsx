@@ -113,6 +113,7 @@ export default function MonsterTable() {
           </Stack>
           <Paper sx={{ m: 2 }}>
             <DataGrid
+              localeText={{ noRowsLabel: "No Gear Found" }}
               rows={sections[activeSection].rows.filter((armament) =>
                 searchQuery
                   .split('+')
@@ -135,6 +136,7 @@ export default function MonsterTable() {
                 )
               }
               getRowHeight={() => 'auto'}
+              autoHeight={true}
             />
           </Paper>
         </Stack>

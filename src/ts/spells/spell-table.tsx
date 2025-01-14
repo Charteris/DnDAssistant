@@ -67,6 +67,7 @@ export default function SpellTable() {
       />
       <Paper sx={{ margin: 1 }}>
         <DataGrid
+          localeText={{ noRowsLabel: "No Spells Found" }}
           rows={filteredSpells}
           columns={spellColumnDescriptor}
           onRowClick={onViewSpell}
@@ -77,6 +78,7 @@ export default function SpellTable() {
           }}
           pageSizeOptions={[10, 25, 50]}
           getRowId={(row) => row.name}
+          autoHeight={true}
         />
       </Paper>
       <Dialog

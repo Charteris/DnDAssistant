@@ -74,6 +74,7 @@ const MonsterTable: FC<{
       />
       <Paper sx={{ margin: 1 }}>
         <DataGrid
+          localeText={{ noRowsLabel: "No Monsters Found" }}
           rows={filteredMonsters}
           columns={monsterColumnDescriptor}
           onRowClick={onRowClick ?? onViewMonster}
@@ -84,6 +85,7 @@ const MonsterTable: FC<{
           }}
           pageSizeOptions={[10, 25, 50]}
           getRowId={(row) => row.name}
+          autoHeight={true}
           {...props}
         />
       </Paper>
