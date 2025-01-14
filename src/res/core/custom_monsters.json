@@ -1,6 +1,6 @@
 [
   {
-    "name": "Demonforged Mech Suit",
+    "name": "Demon-forged Mech Suit",
     "meta": "Large construct, chaotic evil",
     "AC": "18 (Natural Armor)",
     "HP": "110",
@@ -26,8 +26,8 @@
     "Senses": "Passive Perception 8",
     "Languages": "Every Language (demon core processor)",
     "Challenge": "5 (1,800 XP)",
-    "Traits": "<p><em><strong>Exo Skeleton.</strong></em> A sentient creature inhabits and controls the Mech Suit from within. Oncesubstantial damage is dealt to the mech suit, the creature within may be exposed.</p><p><em><strong>Demon Forged</strong></em> This mech suit was forged by a demon of hell at a demon forge providing itresistance to fire damage. It also imbues the create inhabiting the suit with hatred, forcing their alignment to bechaotic evil.</p>",
-    "Actions": "<p><em><strong>Multiattack.</strong></em> The Mech Suit makes two attacks with its Serrator Claws.</p><p><em><strong>Serrator Claws.</strong></em> +7 to hit, reach 10 ft., one target. <em>Hit:</em> 1d8 slashing damage and  1d8 piercing damage.</p><p><em><strong>Astral Cannon.</strong></em> +7 to hit, range 60/360 ft., one target. <em>Hit:</em> 2d8 force damage.</p>",
+    "Traits": "<p><em><strong>Exo Skeleton.</strong></em> A sentient creature inhabits and controls the Mech Suit from within. Once substantial damage is dealt to the mech suit, the creature within may be exposed. If the exhaust of the mech suit is damaged, the demonic presence within the machine awakens, forcing the inhabitant into a rage which allows them one additional attack as a bonus action. After the exhaust sustains enough damage, the mech suit will implode, protecting the inhabitant with a demonic ward (rendering them unconscious) whilst dealing 2d6 fire damage to all creatures within a 30ft radius and knocking them back 15ft. This completely destroys the mech suit and all weapons in hellfire.</p><p><em><strong>Demon Forged.</strong></em> This mech suit was forged through a pact with a demon of hell at a demon forge, providing it resistance to fire damage. It also imbues the creature inhabiting the suit with hatred, forcing their alignment to be chaotic evil, attacking any and all creatures it can see, while they are operating the suit.</p>",
+    "Actions": "<p><em><strong>Serrator Claws.</strong></em> +7 to hit, reach 10 ft., one target. <em>Hit:</em> 1d8 slashing damage and 1d8 piercing damage. A successful attack with these claws renders the creatures armour weaker. The attacked creature has a -1 AC penalty until the attackers next turn.</p><p><em><strong>Astral Cannon.</strong></em> +7 to hit, range 30/360 ft., one target. <em>Hit:</em> 2d8 force damage. A creature successfully hit by this cannon are knocked back 15 ft due to the force of the blast.</p>",
     "img_url": "https://wh40k.lexicanum.com/mediawiki/images/e/e3/GhazSaga.jpg"
   }
 ]
