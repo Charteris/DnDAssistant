@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/DnDAssistant/static/js/main.49b2516d.js",
+    "main.js": "/DnDAssistant/static/js/main.48f19129.js",
     "static/js/318.096ee082.chunk.js": "/DnDAssistant/static/js/318.096ee082.chunk.js",
     "static/media/Avandria.png": "/DnDAssistant/static/media/Avandria.aba68b144e09ff63f465.png",
     "static/media/dragonbane_citadel.png": "/DnDAssistant/static/media/dragonbane_citadel.ca39348650a3c5ea8f65.png",
@@ -26,10 +26,10 @@
     "static/media/plant-icon.jpg": "/DnDAssistant/static/media/plant-icon.7fb308a1ac2dcec9c538.jpg",
     "static/media/ooze-icon.jpg": "/DnDAssistant/static/media/ooze-icon.5538a1b3bde165a447af.jpg",
     "index.html": "/DnDAssistant/index.html",
-    "main.49b2516d.js.map": "/DnDAssistant/static/js/main.49b2516d.js.map",
+    "main.48f19129.js.map": "/DnDAssistant/static/js/main.48f19129.js.map",
     "318.096ee082.chunk.js.map": "/DnDAssistant/static/js/318.096ee082.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.49b2516d.js"
+    "static/js/main.48f19129.js"
   ]
 }
