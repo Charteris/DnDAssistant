@@ -57,29 +57,33 @@ export default function SpellTable() {
         <CreateSpell />
       </Stack>
       <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
-      <TextField
-        variant="filled"
-        fullWidth
-        value={searchQuery}
-        onChange={(event) => setSearchQuery(event.target.value)}
-        label="Search Spells"
-        size="small"
-      />
-      <Paper sx={{ margin: 1 }}>
-        <DataGrid
-          localeText={{ noRowsLabel: "No Spells Found" }}
-          rows={filteredSpells}
-          columns={spellColumnDescriptor}
-          onRowClick={onViewSpell}
-          initialState={{
-            pagination: {
-              paginationModel: { pageSize: 25 },
-            },
-          }}
-          pageSizeOptions={[10, 25, 50]}
-          getRowId={(row) => row.name}
-          autoHeight={true}
-        />
+      <Paper sx={{ p: 3 }}>
+        <Stack direction="column">
+          <TextField
+            variant="filled"
+            fullWidth
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            label="Search Spells"
+            size="small"
+          />
+          <Paper sx={{ m: 2 }}>
+            <DataGrid
+              localeText={{ noRowsLabel: "No Spells Found" }}
+              rows={filteredSpells}
+              columns={spellColumnDescriptor}
+              onRowClick={onViewSpell}
+              initialState={{
+                pagination: {
+                  paginationModel: { pageSize: 25 },
+                },
+              }}
+              pageSizeOptions={[10, 25, 50]}
+              getRowId={(row) => row.name}
+              autoHeight={true}
+            />
+          </Paper>
+        </Stack>
       </Paper>
       <Dialog
         open={selectedSpell !== null}

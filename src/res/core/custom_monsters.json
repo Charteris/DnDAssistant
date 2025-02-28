@@ -29,5 +29,31 @@
     "Traits": "<p><em><strong>Exo Skeleton.</strong></em> A sentient creature inhabits and controls the Mech Suit from within. Once substantial damage is dealt to the mech suit, the creature within may be exposed. If the exhaust of the mech suit is damaged, the demonic presence within the machine awakens, forcing the inhabitant into a rage which allows them one additional attack as a bonus action. After the exhaust sustains enough damage, the mech suit will implode, protecting the inhabitant with a demonic ward (rendering them unconscious) whilst dealing 2d6 fire damage to all creatures within a 30ft radius and knocking them back 15ft. This completely destroys the mech suit and all weapons in hellfire.</p><p><em><strong>Demon Forged.</strong></em> This mech suit was forged through a pact with a demon of hell at a demon forge, providing it resistance to fire damage. It also imbues the creature inhabiting the suit with hatred, forcing their alignment to be chaotic evil, attacking any and all creatures it can see, while they are operating the suit.</p>",
     "Actions": "<p><em><strong>Serrator Claws.</strong></em> +7 to hit, reach 10 ft., one target. <em>Hit:</em> 1d8 slashing damage and 1d8 piercing damage. A successful attack with these claws renders the creatures armour weaker. The attacked creature has a -1 AC penalty until the attackers next turn.</p><p><em><strong>Astral Cannon.</strong></em> +7 to hit, range 30/360 ft., one target. <em>Hit:</em> 2d8 force damage. A creature successfully hit by this cannon are knocked back 15 ft due to the force of the blast.</p>",
     "img_url": "https://wh40k.lexicanum.com/mediawiki/images/e/e3/GhazSaga.jpg"
+  },
+  {
+    "name": "Spellsword Inquisitor",
+    "meta": "Medium humanoid, any",
+    "AC": "16 (Natural Armor)",
+    "HP": "120",
+    "Speed": "30 ft.",
+    "STR": "10",
+    "STR_mod": "(+0)",
+    "DEX": "17",
+    "DEX_mod": "(+3)",
+    "CON": "14",
+    "CON_mod": "(+2)",
+    "INT": "16",
+    "INT_mod": "(+3)",
+    "WIS": "11",
+    "WIS_mod": "(+0)",
+    "CHA": "2",
+    "CHA_mod": "(-4)",
+    "Skills": "",
+    "Senses": "Passive Perception 10",
+    "Languages": "Common and Draconic",
+    "Challenge": "5 (1,800 XP)",
+    "Traits": "<p><em><strong>Channelling.</strong></em> Spellsword Inquisitors can enchant their weapons at will, imbuing elemental effects which inflicts an additional 1d6 elemental damage. </p><p><em><strong>6th Sense.</strong></em> There is a 5% chance for the Spellsword to dodge any projectiles (physical or magical). </p><p><em><strong>Spellcasting.</strong></em> The Spellsword Inquisitor is a 4th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The Spellsword has the following Sorcerer spells prepared: </p><p>Cantrips (at will): Blade Ward, Booming Blade, Thunderclap, Sword Burst </p><p>1st level (3 slots): Burning Hands, Mage Armor, Chaos Bolt </p><p>2nd level (2 slots): Misty Step, Kinetic Jaunt, Mind Spike, Shadow Blade </p><p>3rd level (2 slots): Daylight, Counterspell, Gaseous Form, Thunder Step </p><p>4th Spell (1 slot): Dimension Door, Charm Monster </p>",
+    "Actions": "<p><em><strong>Eviscerate.</strong></em> The Spellsword makes two slash attacks with their sword. </p><p><em><strong>Defensive Manoeuver.</strong></em> The Spellsword makes a slash attack and casts a Blade Ward. </p><p><em><strong>Offensive Manoeuver.</strong></em> The Spellsword casts a 1st or 2nd level spell without expending a spell slot, followed by a slash attack. </p><p><em><strong>Dual Cast.</strong></em> The Spellsword casts two 1st or 2nd level spells without expending a spell slot. </p><p><em><strong>Slash.</strong></em> +10 to hit, reach 10 ft., one target. <em>Hit:</em> 8 (1d8 + 6) slashing damage. </p>",
+    "img_url": "https://www.gmbinder.com/images/R2xZ5gY.jpg"
   }
 ]

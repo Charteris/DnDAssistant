@@ -35,7 +35,7 @@ type SectionsType = {
   [id: string]: { rows: GearType[]; columns: GridColDef[] };
 };
 
-export default function MonsterTable() {
+export default function GearTable() {
   const [searchQuery, setSearchQuery] = React.useState<string>('');
   const [activeSection, setActiveSection] = React.useState<
     'Armour' | 'Weapons' | 'Gear'
@@ -79,17 +79,17 @@ export default function MonsterTable() {
         <CreateGear />
       </Stack>
       <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
-      <TextField
-        variant="filled"
-        fullWidth
-        sx={{ marginBottom: 2 }}
-        value={searchQuery}
-        onChange={(event) => setSearchQuery(event.target.value)}
-        label="Search Armaments"
-        size="small"
-      />
       <Paper sx={{ p: 3 }}>
         <Stack direction="column">
+          <TextField
+            variant="filled"
+            fullWidth
+            sx={{ marginBottom: 2 }}
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            label="Search Armaments"
+            size="small"
+          />
           <Stack direction="row" justifyContent="space-between">
             <Tabs
               value={activeSection}

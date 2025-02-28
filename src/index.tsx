@@ -10,6 +10,7 @@ import theme from './theme';
 import AppRouter from './ts/app-router';
 
 const rootElement = document.getElementById('root');
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const root = ReactDOM.createRoot(rootElement!);
 
 root.render(

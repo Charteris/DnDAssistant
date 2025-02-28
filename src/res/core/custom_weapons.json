@@ -33,7 +33,7 @@
     "weight": "4 lb",
     "properties": "Versatile (1d8)",
     "type": "Wondrous melee",
-    "description": "As an action, the weilder can brand a creature of lower intelligence. They must succeed a DC8 intelligence saving throw or be controlled by the master. As a ritual, the wielder can select a lesser corpse which is still fresh and resurrect it as a mindless, undead servant. The number of creatures which can be controlled through this method is proportional to the weilders magical ability (consult the DM)."
+    "description": "As an action, the wielder can brand a creature of lower intelligence. They must succeed a DC8 intelligence saving throw or be controlled by the master. As a ritual, the wielder can select a lesser corpse which is still fresh and resurrect it as a mindless, undead servant. The number of creatures which can be controlled through this method is proportional to the wielders magical ability (consult the DM)."
   },
   {
     "name": "Astral Cannon",
@@ -51,6 +51,15 @@
     "weight": "4 lb",
     "properties": "Light",
     "type": "Wondrous melee",
-    "description": "These claws are from a Demonforged Mech Suit. They are made from a heavy mineral, requiring the wielder to have a strength of 15+ to be used."
+    "description": "These claws are from a Demon-forged Mech Suit. They are made from a heavy mineral, requiring the wielder to have a strength of 15+ to be used."
+  },
+  {
+    "name": "Blade Rifle",
+    "cost": "400 gp",
+    "damage": "1d4 piercing + 1d8 force",
+    "weight": "8 lb",
+    "properties": "Heavy, two-handed",
+    "type": "Wondrous ranged",
+    "description": "This rifle is built from the remains of a Demon-forged Mech Suit. It fires knives with immense force and has 3 serrating claws forming a bayonet which deals 1d6 piercing + 1d6 slashing damage."
   }
 ]

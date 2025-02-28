@@ -64,30 +64,34 @@ const MonsterTable: FC<{
         <CreateMonster />
       </Stack>
       <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
-      <TextField
-        variant="filled"
-        fullWidth
-        value={searchQuery}
-        onChange={(event) => setSearchQuery(event.target.value)}
-        label="Search Monsters"
-        size="small"
-      />
-      <Paper sx={{ margin: 1 }}>
-        <DataGrid
-          localeText={{ noRowsLabel: "No Monsters Found" }}
-          rows={filteredMonsters}
-          columns={monsterColumnDescriptor}
-          onRowClick={onRowClick ?? onViewMonster}
-          initialState={{
-            pagination: {
-              paginationModel: { pageSize: 25 },
-            },
-          }}
-          pageSizeOptions={[10, 25, 50]}
-          getRowId={(row) => row.name}
-          autoHeight={true}
-          {...props}
-        />
+      <Paper sx={{ p: 3 }}>
+        <Stack direction="column">
+          <TextField
+            variant="filled"
+            fullWidth
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            label="Search Monsters"
+            size="small"
+          />
+          <Paper sx={{ margin: 1 }}>
+            <DataGrid
+              localeText={{ noRowsLabel: "No Monsters Found" }}
+              rows={filteredMonsters}
+              columns={monsterColumnDescriptor}
+              onRowClick={onRowClick ?? onViewMonster}
+              initialState={{
+                pagination: {
+                  paginationModel: { pageSize: 25 },
+                },
+              }}
+              pageSizeOptions={[10, 25, 50]}
+              getRowId={(row) => row.name}
+              autoHeight={true}
+              {...props}
+            />
+          </Paper>
+        </Stack>
       </Paper>
       <Dialog
         open={selectedMonster !== null}
