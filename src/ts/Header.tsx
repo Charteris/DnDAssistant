@@ -34,7 +34,7 @@ const PageMenu: FC<{ pages: Page[] }> = ({ pages }) => {
     <>
       {pages.map((page, index) => {
         return (
-          <span>
+          <span key={page.name}>
             <MenuItem
               onClick={(event) => onButtonClick(page.path, index, event)}
               sx={{ py: '6px', px: '12px' }}
@@ -49,9 +49,10 @@ const PageMenu: FC<{ pages: Page[] }> = ({ pages }) => {
                 anchorEl={anchorElement}
                 open={index === activeIndex}
                 onClose={() => { setAnchorElement(null); setActiveIndex(-1); }}
+                key={page.name}
               >
                 {page.path.map((subPage) => (
-                  <MenuItem onClick={() => (typeof subPage.path === 'string') && navigate(subPage.path)}>
+                  <MenuItem onClick={() => (typeof subPage.path === 'string') && navigate(subPage.path)} key={subPage.name}>
                     {subPage.name}
                   </MenuItem>
                 ))}

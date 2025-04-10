@@ -25,8 +25,8 @@ const SpellEditor: FC<{ onUpdateGear: (jsonInput: string) => void }> = ({ onUpda
     if (components.material) { rawComponents.push('M'); }
     if (components.somatic) { rawComponents.push('S'); }
     if (components.verbal) { rawComponents.push('V'); }
-    const rawMaterialsNeeded = components.materials_needed.length > 0
-      ? ` (${components.materials_needed.join(', ')})`
+    const rawMaterialsNeeded = components.materials_needed?.length ?? 0 > 0
+      ? ` (${components.materials_needed?.join(', ')})`
       : '';
     components.raw = rawComponents.join(', ') + rawMaterialsNeeded;
     return components

@@ -39,7 +39,7 @@ const RenderText: FC<{
   text: string;
 }> = ({ text }) => {
   return (
-    <td
+    <div
       dangerouslySetInnerHTML={{
         __html: text,
       }}
@@ -52,7 +52,7 @@ const RenderArray: FC<{ array: string[] | object[]; depth: number }> = ({
   depth,
 }) => {
   return (
-    <Stack direction="column">
+    <Stack direction="column" key={`array-${depth}`}>
       {((array ?? []) as InstanceType[]).map((subInstance: InstanceType) =>
         RenderJsonRecursive({ instance: subInstance, depth: depth + 1 })
       )}
@@ -65,20 +65,20 @@ const RenderObject: FC<{ object: object; depth: number }> = ({
   depth,
 }) => {
   return (
-    <Stack direction="column" p={1}>
+    <Stack direction="column" p={1} key={`object-${depth}`}>
       {Object.entries(object).map(([title, value]) => {
         switch (title) {
           case 'table':
             return <RenderTable {...value} />;
           case 'content':
             return (
-              <Stack direction="column">
+              <Stack direction="column" key={title}>
                 {RenderJsonRecursive({ instance: value, depth: depth + 1 })}
               </Stack>
             );
           default:
             return (
-              <CustomAccordion defaultExpanded={depth > 1}>
+              <CustomAccordion defaultExpanded={depth > 1} key={title}>
                 <AccordionSummary
                   expandIcon={<ArrowDropDown />}
                   aria-controls="panel1-content"

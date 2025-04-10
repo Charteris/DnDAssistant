@@ -1,5 +1,4 @@
 import React from 'react';
-import monsters from '../../res/core/srd_5e_monsters.json';
 import {
   DIFFICULTIES,
   ENCOUNTER_MULTIPLIERS,
@@ -7,7 +6,7 @@ import {
   MAX_EXPERIENCE,
   MIN_EXPERIENCE,
 } from '../constants';
-import { Monster } from '../types/Monster';
+import { allMonsters, Monster } from '../types/Monster';
 
 const getMonsterXP = (monster: Monster) => {
   return Number(monster.Challenge.split('(')[1].replace(/[^0-9.]/g, ''));
@@ -66,7 +65,7 @@ export default function useGenerateEncounter() {
       DIFFICULTIES.findIndex((diff) => diff === difficulty)
       ] * partySize;
 
-    let potentialMonsters = monsters.filter(
+    let potentialMonsters = allMonsters.filter(
       (rawMonster) => {
         const monster = rawMonster as Monster;
         return filterMonsterByExperience(monster) &&

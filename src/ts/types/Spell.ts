@@ -1,18 +1,13 @@
 import spells from '../../res/core/srd_5e_spells.json';
 
+// TYPES
+
 export type SpellComponent = {
   material: boolean,
-  materials_needed: string[],
+  materials_needed?: string[],
   raw: string,
   somatic: boolean,
   verbal: boolean
-}
-export const defaultComponent = {
-  material: false,
-  materials_needed: [],
-  raw: "",
-  somatic: false,
-  verbal: false,
 };
 
 export type Spell = {
@@ -21,7 +16,7 @@ export type Spell = {
   components: SpellComponent,
   description: string,
   duration: string,
-  higher_levels: string,
+  higher_levels?: string,
   level: string,
   name: string,
   range: string,
@@ -29,6 +24,18 @@ export type Spell = {
   school: string,
   tags: string[],
   type: string
+};
+
+// DATA
+
+export const allSpells: Spell[] = spells;
+
+export const defaultComponent = {
+  material: false,
+  materials_needed: [],
+  raw: "",
+  somatic: false,
+  verbal: false,
 };
 
 export const defaultSpell: Spell = {
@@ -52,6 +59,7 @@ export const defaultSpell: Spell = {
   type: "abjuration cantrip"
 }
 
+// ENUMS
 
 export const LEVELS = ['cantrip', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 export const CLASSES = ['druid', 'sorcerer', 'wizard', 'ranger', 'bard', 'warlock', 'cleric', 'paladin'];

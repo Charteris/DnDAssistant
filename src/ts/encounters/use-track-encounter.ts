@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Monster } from '../types/Monster';
-import monsters from '../../res/core/srd_5e_monsters.json';
+import { allMonsters, Monster } from '../types/Monster';
 import { v4 as uuidv4 } from 'uuid';
 
 type RemainingMonster = {
@@ -87,7 +86,7 @@ const useTrackEncounter = (monstersInCombat: Monster[]) => {
     [remainingMonsters, setRemainingMonsters, setSelectedMonster]
   );
 
-  const identifiedMonster = monsters.find(
+  const identifiedMonster = allMonsters.find(
     (monster) => selectedMonster?.name === monster.name
   ) as Monster;
 

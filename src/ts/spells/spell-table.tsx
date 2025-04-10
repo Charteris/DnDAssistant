@@ -11,9 +11,8 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import spells from '../../res/core/srd_5e_spells.json';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
-import { Spell } from '../types/Spell';
+import { allSpells, Spell } from '../types/Spell';
 import { useState } from 'react';
 import PageIterator from '../shared/page-iterator';
 import SpellCard from '../spells/spell-card';
@@ -26,7 +25,7 @@ export default function SpellTable() {
   const [selectedSpell, setSelectedSpell] = useState<Spell | null>(null);
   const [spellIndex, setSpellIndex] = useState<number>(0);
 
-  const filteredSpells = spells.filter((spell) =>
+  const filteredSpells = allSpells.filter((spell) =>
     searchQuery
       .split('+')
       .some((query) => spell.name.toLowerCase().includes(query.toLowerCase()))

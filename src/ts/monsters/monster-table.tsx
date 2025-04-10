@@ -12,15 +12,12 @@ import {
   Typography,
 } from '@mui/material';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
-import { Monster } from '../types/Monster';
+import { allMonsters, Monster } from '../types/Monster';
 import PageIterator from '../shared/page-iterator';
 import MonsterCard from './monster-card';
 import { Close } from '@mui/icons-material';
 import { monsterColumnDescriptor } from './monster-column-descriptor';
 import CreateMonster from './create-monster';
-
-import filtered_monsters from '../../res/core/filtered_monsters.json';
-import custom_monsters from '../../res/core/custom_monsters.json';
 
 const MonsterTable: FC<{
   onRowClick?: (params: GridRowParams) => void;
@@ -30,7 +27,7 @@ const MonsterTable: FC<{
   const [selectedMonster, setSelectedMonster] = useState<Monster | null>(null);
   const [monsterIndex, setMonsterIndex] = useState<number>(0);
 
-  const filteredMonsters = [...filtered_monsters, ...custom_monsters].filter((monster) =>
+  const filteredMonsters = allMonsters.filter((monster) =>
     searchQuery
       .split('+')
       .some((query) => monster.name.toLowerCase().includes(query.toLowerCase()))

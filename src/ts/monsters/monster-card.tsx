@@ -72,15 +72,16 @@ const MonsterCard: FC<{ monster: Monster }> = ({ monster }) => {
                   variant="subtitle1"
                   marginBottom={2}
                 >{`AC: ${monster.AC}`}</Typography>
-                {[statsA, statsB].map((stats) => (
+                {[statsA, statsB].map((stats, index) => (
                   <Stack
                     spacing={2}
                     direction="row"
                     justifyContent="space-between"
                     alignItems="center"
+                    key={`${stats.length}-${index}`}
                   >
                     {stats.map(({ key, value }) => (
-                      <Stack direction="column" alignItems="center">
+                      <Stack direction="column" alignItems="center" key={key}>
                         <Typography variant="h6">{key}</Typography>
                         <Typography variant="subtitle1">{value}</Typography>
                       </Stack>

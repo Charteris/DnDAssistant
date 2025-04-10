@@ -12,21 +12,13 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import armours from '../../res/core/srd_5e_armour.json';
-import magic_armours from '../../res/core/srd_5e_magic_armour.json';
-import custom_armours from '../../res/core/custom_armour.json';
-import weapons from '../../res/core/srd_5e_weapons.json';
-import magic_weapons from '../../res/core/srd_5e_magic_weapons.json';
-import custom_weapons from '../../res/core/custom_weapons.json';
-import gears from '../../res/core/srd_5e_gear.json';
-import custom_gears from '../../res/core/custom_gear.json';
 import {
   armourColumnDescriptor,
   weaponColumnDescriptor,
   gearColumnDescriptor,
 } from './gear-column-descriptors';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { Armour, Gear, Weapon } from '../types/Gear';
+import { allArmour, allGear, allWeapons, Armour, Gear, Weapon } from '../types/Gear';
 import CreateGear from './create-gear';
 import { useCallback } from 'react';
 
@@ -43,14 +35,14 @@ export default function GearTable() {
   const [showDescription, setShowDescription] = React.useState(false);
   const sections: SectionsType = {
     Weapons: {
-      rows: [...weapons, ...magic_weapons, ...custom_weapons],
+      rows: allWeapons,
       columns: weaponColumnDescriptor,
     },
     Armour: {
-      rows: [...armours, ...magic_armours, ...custom_armours],
+      rows: allArmour,
       columns: armourColumnDescriptor,
     },
-    Gear: { rows: [...gears, ...custom_gears], columns: gearColumnDescriptor },
+    Gear: { rows: allGear, columns: gearColumnDescriptor },
   };
 
   const getColumnDescription = useCallback(() => {

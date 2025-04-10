@@ -1,4 +1,5 @@
-import monsters from '../../res/core/srd_5e_monsters.json';
+import filtered_monsters from '../../res/core/filtered_monsters.json';
+import custom_monsters from '../../res/core/custom_monsters.json';
 
 import aberration from "../../res/images/aberration-icon.jpg";
 import beast from "../../res/images/beast-icon.jpg";
@@ -15,9 +16,7 @@ import ooze from "../../res/images/ooze-icon.jpg";
 import plant from "../../res/images/plant-icon.jpg";
 import undead from "../../res/images/undead-icon.jpg";
 
-export const PLACEHOLDER_IMAGES: { [key: string]: string } = {
-  aberration, beast, celestial, construct, dragon, elemental, fey, fiend, giant, humanoid, monstrosity, ooze, plant, undead
-};
+// TYPE
 
 export type Monster = {
   name: string,
@@ -37,21 +36,33 @@ export type Monster = {
   WIS_mod: string,
   CHA: string,
   CHA_mod: string,
-  Saving_Throws: string | undefined,
-  Skills: string | undefined,
-  Damage_Vulnerabilities: string | undefined,
-  Damage_Resistances: string | undefined,
-  Damage_Immunities: string | undefined,
-  Condition_Immunities: string | undefined,
+  Saving_Throws?: string | undefined,
+  Skills?: string | undefined,
+  Damage_Vulnerabilities?: string | undefined,
+  Damage_Resistances?: string | undefined,
+  Damage_Immunities?: string | undefined,
+  Condition_Immunities?: string | undefined,
   Senses: string,
   Languages: string,
   Challenge: string,
-  Traits: string | undefined,
-  Actions: string,
-  Reactions: string | undefined,
-  Legendary_Actions: string | undefined,
+  Traits?: string | undefined,
+  Actions?: string | undefined,
+  Reactions?: string | undefined,
+  Legendary_Actions?: string | undefined,
   img_url: string,
 };
+
+// DATA
+
+export const allMonsters: Monster[] = [
+  ...filtered_monsters,
+  ...custom_monsters
+]
+
+export const PLACEHOLDER_IMAGES: { [key: string]: string } = {
+  aberration, beast, celestial, construct, dragon, elemental, fey, fiend, giant, humanoid, monstrosity, ooze, plant, undead
+};
+
 export const defaultMonster = {
   name: "",
   meta: "Medium humanoid, any",
@@ -75,6 +86,4 @@ export const defaultMonster = {
   Challenge: "1/4 (50 XP)",
   Actions: "",
   img_url: PLACEHOLDER_IMAGES.humanoid,
-}
-
-export type baseMonster = typeof monsters[0];
+};

@@ -28,7 +28,7 @@ export default function Mechanics() {
       <Typography variant="h4">Players Guides</Typography>
       <Divider orientation="horizontal" sx={{ mb: '1%', mt: '0.5%' }} />
       {userGuides.map(({ title, guides }) => (
-        <Box>
+        <Box key={title}>
           <Typography variant="h5">{title}</Typography>
           <Paper sx={{ p: 1, m: 1 }}>
             <Suspense
